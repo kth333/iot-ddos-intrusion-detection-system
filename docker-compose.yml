@@ -1,0 +1,44 @@
+services:
+  mqtt-broker:
+    image: eclipse-mosquitto
+    container_name: mqtt-broker
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - ./mosquitto/config:/mosquitto/config
+      - ./mosquitto/data:/mosquitto/data
+      - ./mosquitto/log:/mosquitto/log
+
+  device_camera:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile.devices
+    container_name: device_camera
+    command: python device_camera.py
+
+  device_light:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile.devices
+    container_name: device_light
+    command: python device_light.py
+
+  device_temperature:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile.devices
+    container_name: device_temperature
+    command: python device_temperature.py
+
+  ids:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ids
+    volumes:
+      - ./models:/app/models
+      - ./ids:/app/ids
+    depends_on:
+      - mqtt-broker
+    command: python ids/ids.py

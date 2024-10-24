@@ -7,15 +7,16 @@ import logging
 import subprocess
 
 # Load the trained model
-model = keras.models.load_model('../models/ddos_detection_model.keras')
+model = keras.models.load_model('/app/models/ddos_detection_model.keras')
 
 # Load preprocessing objects
 ohe = joblib.load('../models/ohe.joblib')  # OneHotEncoder used during training
 scaler = joblib.load('../models/scaler.joblib')  # StandardScaler used during training
 
-# Configure logging
-logging.basicConfig(filename='../logs/ids.log', level=logging.INFO,
-                    format='%(asctime)s %(levelname)s %(message)s')
+# Configure logging with rotation
+from logging.handlers import RotatingFileHandler
+handler = RotatingFileHandler('../logs/ids.log', maxBytes=5*1024*1024, backupCount=3)  # 5MB per file, 3 backups
+logging.basicConfig(handlers=[handler], level=logging.INFO, format='%(asctime)s %(levelname)s %(message)s')
 
 # Device priority mapping
 device_priorities = {
@@ -27,7 +28,7 @@ device_priorities = {
 def preprocess_features(features):
     df = pd.DataFrame([features])
     categorical_cols = ['proto']
-    numerical_cols = ['length']
+    numerical_cols = ['length', 'sport', 'dport']
 
     # Ensure all expected columns are present
     for col in categorical_cols + numerical_cols:
@@ -50,34 +51,45 @@ def extract_features(packet):
     # Protocol
     if packet.haslayer(TCP):
         features['proto'] = 'tcp'
+        features['sport'] = packet[TCP].sport
+        features['dport'] = packet[TCP].dport
+        features['flags'] = str(packet[TCP].flags)
     elif packet.haslayer(UDP):
         features['proto'] = 'udp'
+        features['sport'] = packet[UDP].sport
+        features['dport'] = packet[UDP].dport
     else:
         features['proto'] = 'other'
+        features['sport'] = 0
+        features['dport'] = 0
 
     # Packet length
     features['length'] = len(packet)
 
-    # Source IP
+    # Source and Destination IPs
     features['src_ip'] = packet[IP].src if packet.haslayer(IP) else '0.0.0.0'
+    features['dst_ip'] = packet[IP].dst if packet.haslayer(IP) else '0.0.0.0'
 
     return features
 
 def predict_and_act(packet):
-    features = extract_features(packet)
-    src_ip = features.get('src_ip', '0.0.0.0')
+    try:
+        features = extract_features(packet)
+        src_ip = features.get('src_ip', '0.0.0.0')
 
-    # Preprocess features
-    X_preprocessed = preprocess_features(features)
+        # Preprocess features
+        X_preprocessed = preprocess_features(features)
 
-    # Predict
-    prediction_prob = model.predict(X_preprocessed)[0][0]
-    prediction = int(prediction_prob > 0.5)
+        # Predict
+        prediction_prob = model.predict(X_preprocessed)[0][0]
+        prediction = int(prediction_prob > 0.5)
 
-    if prediction == 1:
-        handle_attack(src_ip, prediction_prob)
-    else:
-        handle_normal(src_ip, prediction_prob)
+        if prediction == 1:
+            handle_attack(src_ip, prediction_prob)
+        else:
+            handle_normal(src_ip, prediction_prob)
+    except Exception as e:
+        logging.error(f"Error in predict_and_act: {e}")
 
 def handle_attack(src_ip, prediction_prob):
     priority = device_priorities.get(src_ip, 'low')
