@@ -1,10 +1,7 @@
-# -*- coding: utf-8 -*-
-
 import pandas as pd
 
 # Read in the dataset for Training Set Normal Traffic
-Training_Normal_Traffic = pd.read_csv('../data/Training_Set_Normal_Traffic.csv')
-
+Training_Normal_Traffic = pd.read_csv('/app/data/Training_Set_Normal_Traffic.csv')
 
 # Find out the length of the dataset for Training Set Normal Traffic
 print(len(Training_Normal_Traffic))
@@ -13,7 +10,7 @@ print(len(Training_Normal_Traffic))
 Training_Normal_Traffic
 
 # Read in the dataset for Training Set Attack Traffic
-Training_Attack_Traffic = pd.read_csv('../data/Training_Set_Attack_Traffic.csv')
+Training_Attack_Traffic = pd.read_csv('/app/data/Training_Set_Attack_Traffic.csv')
 
 # The same length will be used for Training Attack Traffic dataset so that we do not have an imbalanced dataset that could result in classification bias
 
@@ -22,7 +19,6 @@ Training_Attack_Traffic = pd.read_csv('../data/Training_Set_Attack_Traffic.csv')
 
 # Now Training_Attack_Traffic_subset contains 118 randomly selected rows
 #print(len(Training_Attack_Traffic_subset))
-
 # Display the first few rows
 Training_Attack_Traffic
 
@@ -33,7 +29,7 @@ Training_Data = pd.concat([Training_Normal_Traffic, Training_Attack_Traffic], ig
 Training_Data
 
 # Read in the dataset for Testing Set Normal Traffic
-Testing_Normal_Traffic = pd.read_csv('../data/Test_Set_Normal_Traffic.csv')
+Testing_Normal_Traffic = pd.read_csv('/app/data/Test_Set_Normal_Traffic.csv')
 
 
 # Find out the length of the dataset for Testing Set Normal Traffic
@@ -43,7 +39,7 @@ print(len(Testing_Normal_Traffic))
 Testing_Normal_Traffic.head()
 
 # Read in the dataset for Testing Set Attack Traffic
-Testing_Attack_Traffic = pd.read_csv('../data/Test_Set_Attack_Traffic.csv')
+Testing_Attack_Traffic = pd.read_csv('/app/data/Test_Set_Attack_Traffic.csv')
 
 # The same length will be used for Training Attack Traffic dataset so that we do not have an imbalanced dataset that could result in classification bias
 
@@ -79,6 +75,7 @@ print(Training_Data.columns)
 import pandas as pd
 import numpy as np
 import tensorflow as tf
+import joblib
 from tensorflow import keras
 from tensorflow.keras import layers
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
@@ -103,9 +100,15 @@ ohe = OneHotEncoder(sparse_output=False, handle_unknown='ignore')
 # Fit on training data
 X_encoded = ohe.fit_transform(X[categorical_cols])
 
+# Save the OneHotEncoder after fitting
+joblib.dump(ohe, '/app/models/ohe.joblib')
+
 # Scale numerical features
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X[numerical_cols])
+
+# Save the scaler after fitting
+joblib.dump(scaler, '/app/models/scaler.joblib')
 
 # Combine numerical and categorical features
 X_preprocessed = np.hstack([X_scaled, X_encoded])
@@ -164,4 +167,4 @@ from sklearn.metrics import classification_report
 print(classification_report(y_test, y_pred_classes))
 
 # Save the model
-model.save('../models/ddos_detection_model.keras')
+model.save('/app/ddos_detection_model.keras')

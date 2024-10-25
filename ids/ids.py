@@ -10,8 +10,8 @@ import subprocess
 model = keras.models.load_model('/app/models/ddos_detection_model.keras')
 
 # Load preprocessing objects
-ohe = joblib.load('../models/ohe.joblib')  # OneHotEncoder used during training
-scaler = joblib.load('../models/scaler.joblib')  # StandardScaler used during training
+ohe = joblib.load('/app/models/ohe.joblib')  # OneHotEncoder used during training
+scaler = joblib.load('/app/models/scaler.joblib')  # StandardScaler used during training
 
 # Configure logging with rotation
 from logging.handlers import RotatingFileHandler

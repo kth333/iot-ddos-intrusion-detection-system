@@ -1,3 +1,4 @@
+version: '3'
 services:
   mqtt-broker:
     image: eclipse-mosquitto
@@ -38,7 +39,20 @@ services:
     container_name: ids
     volumes:
       - ./models:/app/models
+      - ./data:/app/data
       - ./ids:/app/ids
+      - ./logs:/logs
     depends_on:
       - mqtt-broker
     command: python ids/ids.py
+
+  train:
+    build:
+      context: .
+      dockerfile: Dockerfile.train
+    container_name: train
+    volumes:
+      - ./models:/app/models
+      - ./data:/app/data
+      - ./scripts:/app/scripts
+    command: python /app/scripts/train_model.py
