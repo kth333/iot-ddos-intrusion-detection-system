@@ -10,6 +10,8 @@ COPY . /app
 # Install necessary system packages and Python dependencies
 RUN apt-get update && \
     apt-get install -y \
+    iputils-ping \
+    tcpdump \
     build-essential \
     gfortran \
     libblas-dev \
