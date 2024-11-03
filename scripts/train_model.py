@@ -167,4 +167,4 @@ from sklearn.metrics import classification_report
 print(classification_report(y_test, y_pred_classes))
 
 # Save the model
-model.save('/app/ddos_detection_model.keras')
+model.save('/app/models/ddos_detection_model.keras')

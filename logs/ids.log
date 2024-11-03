@@ -38230,3 +38230,2775 @@ wlp0s20f3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
 2024-10-30 11:14:57,556 INFO IP 172.18.0.5 is already blocked.
 2024-10-30 11:14:57,591 WARNING Attack detected from 172.18.0.3 with probability 1.0. Blocking IP.
 2024-10-30 11:14:57,610 INFO IP 172.18.0.3 is already blocked.
+2024-11-03 10:53:14,174 INFO Logging initialized and working in real-time.
+2024-11-03 10:53:14,528 INFO Waiting 10 seconds before starting IDS...
+2024-11-03 10:53:24,554 INFO Current network configuration:
+br-c7e7afa9cfd2: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.18.0.1  netmask 255.255.0.0  broadcast 172.18.255.255
+        inet6 fe80::42:b8ff:fefb:562a  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:b8:fb:56:2a  txqueuelen 0  (Ethernet)
+        RX packets 15  bytes 420 (420.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 20  bytes 1840 (1.8 KB)
+        TX errors 0  dropped 1 overruns 0  carrier 0  collisions 0
+
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        inet6 fe80::42:c0ff:fe46:327e  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:c0:46:32:7e  txqueuelen 0  (Ethernet)
+        RX packets 91780  bytes 5143613 (5.1 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 253936  bytes 1490707774 (1.4 GB)
+        TX errors 0  dropped 80 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 1820  bytes 123759 (123.7 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1820  bytes 123759 (123.7 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth12c802c: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::84ad:5bff:fe8e:168a  prefixlen 64  scopeid 0x20<link>
+        ether 86:ad:5b:8e:16:8a  txqueuelen 0  (Ethernet)
+        RX packets 9  bytes 717 (717.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 20  bytes 1452 (1.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth2c7414f: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::fca4:91ff:fe6a:4bce  prefixlen 64  scopeid 0x20<link>
+        ether fe:a4:91:6a:4b:ce  txqueuelen 0  (Ethernet)
+        RX packets 13  bytes 951 (951.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 21  bytes 1526 (1.5 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth32d87f8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::5456:e9ff:fe6d:ed28  prefixlen 64  scopeid 0x20<link>
+        ether 56:56:e9:6d:ed:28  txqueuelen 0  (Ethernet)
+        RX packets 8  bytes 581 (581.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 18  bytes 1316 (1.3 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vetha78d3af: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::2806:7aff:feac:917  prefixlen 64  scopeid 0x20<link>
+        ether 2a:06:7a:ac:09:17  txqueuelen 0  (Ethernet)
+        RX packets 25  bytes 1554 (1.5 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 39  bytes 3015 (3.0 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlp0s20f3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.55  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fe80::ae96:9dcf:de33:f6b0  prefixlen 64  scopeid 0x20<link>
+        inet6 fdec:1838:fb48:0:3075:885c:4953:8ee5  prefixlen 64  scopeid 0x0<global>
+        ether e0:d0:45:c7:22:20  txqueuelen 1000  (Ethernet)
+        RX packets 1436798  bytes 2116607208 (2.1 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 174926  bytes 20032979 (20.0 MB)
+        TX errors 0  dropped 12 overruns 0  carrier 0  collisions 0
+
+
+2024-11-03 10:53:24,555 INFO Detected Docker bridge interface: br-c7e7afa9cfd2
+2024-11-03 10:53:24,555 INFO Starting packet sniffing on br-c7e7afa9cfd2...
+2024-11-03 10:53:24,897 WARNING Attack detected from 172.18.0.2 with probability 1.0. Blocking IP.
+2024-11-03 10:53:24,918 INFO IP 172.18.0.2 is already blocked.
+2024-11-03 10:53:24,948 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:53:24,966 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:53:25,797 WARNING Attack detected from 172.18.0.4 with probability 1.0. Blocking IP.
+2024-11-03 10:53:25,807 INFO IP 172.18.0.4 is already blocked.
+2024-11-03 10:53:25,856 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:53:25,864 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:53:30,817 WARNING Attack detected from 172.18.0.4 with probability 1.0. Blocking IP.
+2024-11-03 10:53:30,825 INFO IP 172.18.0.4 is already blocked.
+2024-11-03 10:53:30,867 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:53:30,882 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:53:30,923 WARNING Attack detected from 172.18.0.3 with probability 1.0. Blocking IP.
+2024-11-03 10:53:30,945 INFO IP 172.18.0.3 is already blocked.
+2024-11-03 10:53:30,987 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:53:31,007 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:53:31,819 WARNING Attack detected from 172.18.0.2 with probability 1.0. Blocking IP.
+2024-11-03 10:53:31,827 INFO IP 172.18.0.2 is already blocked.
+2024-11-03 10:53:31,875 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:53:31,884 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:53:35,808 WARNING Attack detected from 172.18.0.4 with probability 1.0. Blocking IP.
+2024-11-03 10:53:35,827 INFO IP 172.18.0.4 is already blocked.
+2024-11-03 10:53:35,866 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:53:35,874 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:53:38,841 WARNING Attack detected from 172.18.0.2 with probability 1.0. Blocking IP.
+2024-11-03 10:53:38,851 INFO IP 172.18.0.2 is already blocked.
+2024-11-03 10:53:38,900 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:53:38,908 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:53:40,823 WARNING Attack detected from 172.18.0.3 with probability 1.0. Blocking IP.
+2024-11-03 10:53:40,833 INFO IP 172.18.0.3 is already blocked.
+2024-11-03 10:53:40,879 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:53:40,888 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:53:40,948 WARNING Attack detected from 172.18.0.4 with probability 1.0. Blocking IP.
+2024-11-03 10:53:40,957 INFO IP 172.18.0.4 is already blocked.
+2024-11-03 10:53:41,004 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:53:41,019 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:53:45,814 WARNING Attack detected from 172.18.0.4 with probability 1.0. Blocking IP.
+2024-11-03 10:53:45,837 INFO IP 172.18.0.4 is already blocked.
+2024-11-03 10:53:45,870 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:53:45,890 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:53:45,932 WARNING Attack detected from 172.18.0.2 with probability 1.0. Blocking IP.
+2024-11-03 10:53:45,940 INFO IP 172.18.0.2 is already blocked.
+2024-11-03 10:53:45,994 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:53:46,004 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:53:50,862 WARNING Attack detected from 172.18.0.3 with probability 1.0. Blocking IP.
+2024-11-03 10:53:50,888 INFO IP 172.18.0.3 is already blocked.
+2024-11-03 10:53:51,087 WARNING Attack detected from 172.18.0.4 with probability 1.0. Blocking IP.
+2024-11-03 10:53:51,116 INFO IP 172.18.0.4 is already blocked.
+2024-11-03 10:53:51,264 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:53:51,288 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:53:51,392 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:53:51,417 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:53:52,887 WARNING Attack detected from 172.18.0.2 with probability 1.0. Blocking IP.
+2024-11-03 10:53:52,914 INFO IP 172.18.0.2 is already blocked.
+2024-11-03 10:53:53,008 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:53:53,031 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:53:55,861 WARNING Attack detected from 172.18.0.4 with probability 1.0. Blocking IP.
+2024-11-03 10:53:55,881 INFO IP 172.18.0.4 is already blocked.
+2024-11-03 10:53:55,957 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:53:55,981 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:53:59,873 WARNING Attack detected from 172.18.0.2 with probability 1.0. Blocking IP.
+2024-11-03 10:53:59,886 INFO IP 172.18.0.2 is already blocked.
+2024-11-03 10:53:59,951 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:53:59,964 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:54:00,852 WARNING Attack detected from 172.18.0.4 with probability 1.0. Blocking IP.
+2024-11-03 10:54:00,874 INFO IP 172.18.0.4 is already blocked.
+2024-11-03 10:54:00,950 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:54:00,968 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:54:01,051 WARNING Attack detected from 172.18.0.3 with probability 1.0. Blocking IP.
+2024-11-03 10:54:01,073 INFO IP 172.18.0.3 is already blocked.
+2024-11-03 10:54:01,149 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:54:01,167 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:54:05,848 WARNING Attack detected from 172.18.0.4 with probability 1.0. Blocking IP.
+2024-11-03 10:54:05,858 INFO IP 172.18.0.4 is already blocked.
+2024-11-03 10:54:05,910 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:54:05,919 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:54:06,848 WARNING Attack detected from 172.18.0.2 with probability 1.0. Blocking IP.
+2024-11-03 10:54:06,864 INFO IP 172.18.0.2 is already blocked.
+2024-11-03 10:54:06,911 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:54:06,919 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:54:10,844 WARNING Attack detected from 172.18.0.4 with probability 1.0. Blocking IP.
+2024-11-03 10:54:10,864 INFO IP 172.18.0.4 is already blocked.
+2024-11-03 10:54:10,896 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:54:10,920 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:54:10,977 WARNING Attack detected from 172.18.0.3 with probability 1.0. Blocking IP.
+2024-11-03 10:54:10,996 INFO IP 172.18.0.3 is already blocked.
+2024-11-03 10:54:11,029 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:54:11,051 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:54:13,872 WARNING Attack detected from 172.18.0.2 with probability 1.0. Blocking IP.
+2024-11-03 10:54:13,897 INFO IP 172.18.0.2 is already blocked.
+2024-11-03 10:54:13,948 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:54:13,972 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:54:15,871 WARNING Attack detected from 172.18.0.4 with probability 1.0. Blocking IP.
+2024-11-03 10:54:15,894 INFO IP 172.18.0.4 is already blocked.
+2024-11-03 10:54:15,960 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:54:15,975 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:54:20,882 WARNING Attack detected from 172.18.0.4 with probability 1.0. Blocking IP.
+2024-11-03 10:54:20,901 INFO IP 172.18.0.4 is already blocked.
+2024-11-03 10:54:20,995 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:54:21,010 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:54:21,085 WARNING Attack detected from 172.18.0.3 with probability 1.0. Blocking IP.
+2024-11-03 10:54:21,108 INFO IP 172.18.0.3 is already blocked.
+2024-11-03 10:54:21,193 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:54:21,210 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:54:21,289 WARNING Attack detected from 172.18.0.2 with probability 1.0. Blocking IP.
+2024-11-03 10:54:21,316 INFO IP 172.18.0.2 is already blocked.
+2024-11-03 10:54:21,399 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:54:21,417 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:54:25,859 WARNING Attack detected from 172.18.0.4 with probability 1.0. Blocking IP.
+2024-11-03 10:54:25,882 INFO IP 172.18.0.4 is already blocked.
+2024-11-03 10:54:25,942 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:54:25,962 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:54:27,916 WARNING Attack detected from 172.18.0.2 with probability 1.0. Blocking IP.
+2024-11-03 10:54:27,940 INFO IP 172.18.0.2 is already blocked.
+2024-11-03 10:54:28,007 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:54:28,022 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:54:30,895 WARNING Attack detected from 172.18.0.4 with probability 1.0. Blocking IP.
+2024-11-03 10:54:30,923 INFO IP 172.18.0.4 is already blocked.
+2024-11-03 10:54:31,018 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:54:31,045 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:54:31,134 WARNING Attack detected from 172.18.0.3 with probability 1.0. Blocking IP.
+2024-11-03 10:54:31,168 INFO IP 172.18.0.3 is already blocked.
+2024-11-03 10:54:31,374 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:54:31,411 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:54:34,901 WARNING Attack detected from 172.18.0.2 with probability 1.0. Blocking IP.
+2024-11-03 10:54:34,909 INFO IP 172.18.0.2 is already blocked.
+2024-11-03 10:54:34,969 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:54:34,978 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:54:35,874 WARNING Attack detected from 172.18.0.4 with probability 1.0. Blocking IP.
+2024-11-03 10:54:35,889 INFO IP 172.18.0.4 is already blocked.
+2024-11-03 10:54:35,956 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:54:35,968 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:54:40,900 WARNING Attack detected from 172.18.0.4 with probability 1.0. Blocking IP.
+2024-11-03 10:54:40,924 INFO IP 172.18.0.4 is already blocked.
+2024-11-03 10:54:41,001 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:54:41,015 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:54:41,090 WARNING Attack detected from 172.18.0.3 with probability 1.0. Blocking IP.
+2024-11-03 10:54:41,113 INFO IP 172.18.0.3 is already blocked.
+2024-11-03 10:54:41,177 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:54:41,192 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:54:41,938 WARNING Attack detected from 172.18.0.2 with probability 1.0. Blocking IP.
+2024-11-03 10:54:41,963 INFO IP 172.18.0.2 is already blocked.
+2024-11-03 10:54:42,034 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:54:42,053 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:54:45,919 WARNING Attack detected from 172.18.0.4 with probability 1.0. Blocking IP.
+2024-11-03 10:54:45,944 INFO IP 172.18.0.4 is already blocked.
+2024-11-03 10:54:46,045 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:54:46,072 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:54:48,935 WARNING Attack detected from 172.18.0.2 with probability 1.0. Blocking IP.
+2024-11-03 10:54:48,951 INFO IP 172.18.0.2 is already blocked.
+2024-11-03 10:54:49,035 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:54:49,057 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:54:50,870 WARNING Attack detected from 172.18.0.4 with probability 1.0. Blocking IP.
+2024-11-03 10:54:50,888 INFO IP 172.18.0.4 is already blocked.
+2024-11-03 10:54:50,981 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:54:50,991 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:54:51,056 WARNING Attack detected from 172.18.0.3 with probability 1.0. Blocking IP.
+2024-11-03 10:54:51,068 INFO IP 172.18.0.3 is already blocked.
+2024-11-03 10:54:51,126 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:54:51,138 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:54:55,912 WARNING Attack detected from 172.18.0.4 with probability 1.0. Blocking IP.
+2024-11-03 10:54:55,939 INFO IP 172.18.0.4 is already blocked.
+2024-11-03 10:54:56,028 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:54:56,050 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:54:56,159 WARNING Attack detected from 172.18.0.2 with probability 1.0. Blocking IP.
+2024-11-03 10:54:56,182 INFO IP 172.18.0.2 is already blocked.
+2024-11-03 10:54:56,318 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:54:56,345 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:55:00,917 WARNING Attack detected from 172.18.0.4 with probability 1.0. Blocking IP.
+2024-11-03 10:55:00,937 INFO IP 172.18.0.4 is already blocked.
+2024-11-03 10:55:01,021 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:55:01,044 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 10:55:01,207 WARNING Attack detected from 172.18.0.3 with probability 1.0. Blocking IP.
+2024-11-03 10:55:01,236 INFO IP 172.18.0.3 is already blocked.
+2024-11-03 10:55:01,333 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 10:55:01,359 INFO IP 172.18.0.5 is already blocked.
+2024-11-03 11:15:19,726 INFO Logging initialized and working in real-time.
+2024-11-03 11:19:16,777 INFO Logging initialized and working in real-time.
+2024-11-03 11:23:42,805 INFO Logging initialized and working in real-time.
+2024-11-03 11:23:43,191 INFO Waiting 10 seconds before starting IDS...
+2024-11-03 11:23:53,224 INFO Current network configuration:
+br-bb8cee1b55cd: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.18.0.1  netmask 255.255.0.0  broadcast 172.18.255.255
+        inet6 fe80::42:a3ff:fe90:83ad  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:a3:90:83:ad  txqueuelen 0  (Ethernet)
+        RX packets 9  bytes 252 (252.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 16  bytes 1680 (1.6 KB)
+        TX errors 0  dropped 1 overruns 0  carrier 0  collisions 0
+
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        inet6 fe80::42:b9ff:fed1:e71e  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:b9:d1:e7:1e  txqueuelen 0  (Ethernet)
+        RX packets 53208  bytes 2946819 (2.9 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 147168  bytes 804917247 (804.9 MB)
+        TX errors 0  dropped 11 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 332  bytes 22719 (22.7 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 332  bytes 22719 (22.7 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth50c1c2a: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::a04d:24ff:fed5:b781  prefixlen 64  scopeid 0x20<link>
+        ether a2:4d:24:d5:b7:81  txqueuelen 0  (Ethernet)
+        RX packets 8  bytes 581 (581.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 19  bytes 1386 (1.3 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth6c56253: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::ec95:baff:fe71:c243  prefixlen 64  scopeid 0x20<link>
+        ether ee:95:ba:71:c2:43  txqueuelen 0  (Ethernet)
+        RX packets 25  bytes 1554 (1.5 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 38  bytes 2957 (2.9 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth8fea977: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::c841:31ff:fe53:851f  prefixlen 64  scopeid 0x20<link>
+        ether ca:41:31:53:85:1f  txqueuelen 0  (Ethernet)
+        RX packets 9  bytes 716 (716.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 18  bytes 1272 (1.2 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vethed77ef4: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::410:fff:fe5e:6998  prefixlen 64  scopeid 0x20<link>
+        ether 06:10:0f:5e:69:98  txqueuelen 0  (Ethernet)
+        RX packets 13  bytes 964 (964.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 20  bytes 1416 (1.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlp0s20f3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.55  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fdec:1838:fb48:0:3075:885c:4953:8ee5  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::ae96:9dcf:de33:f6b0  prefixlen 64  scopeid 0x20<link>
+        ether e0:d0:45:c7:22:20  txqueuelen 1000  (Ethernet)
+        RX packets 1033118  bytes 1546932712 (1.5 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 115892  bytes 12815018 (12.8 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+2024-11-03 11:23:53,225 INFO Detected Docker bridge interface: br-bb8cee1b55cd
+2024-11-03 11:23:53,225 INFO Starting packet sniffing on br-bb8cee1b55cd...
+2024-11-03 11:23:53,716 WARNING Attack detected from 172.18.0.2 with probability 1.0. Blocking IP.
+2024-11-03 11:23:53,733 INFO Blocked IP: 172.18.0.2
+2024-11-03 11:23:53,781 WARNING Attack detected from 172.18.0.3 with probability 1.0. Blocking IP.
+2024-11-03 11:23:53,798 INFO Blocked IP: 172.18.0.3
+2024-11-03 11:23:54,647 WARNING Attack detected from 172.18.0.4 with probability 1.0. Blocking IP.
+2024-11-03 11:23:54,663 INFO Blocked IP: 172.18.0.4
+2024-11-03 11:23:54,711 WARNING Attack detected from 172.18.0.3 with probability 1.0. Blocking IP.
+2024-11-03 11:23:54,719 INFO IP 172.18.0.3 is already blocked.
+2024-11-03 11:23:59,648 WARNING Attack detected from 172.18.0.4 with probability 1.0. Blocking IP.
+2024-11-03 11:23:59,666 INFO IP 172.18.0.4 is already blocked.
+2024-11-03 11:23:59,697 WARNING Attack detected from 172.18.0.3 with probability 1.0. Blocking IP.
+2024-11-03 11:23:59,718 INFO IP 172.18.0.3 is already blocked.
+2024-11-03 11:23:59,761 WARNING Attack detected from 172.18.0.5 with probability 1.0. Blocking IP.
+2024-11-03 11:23:59,801 INFO Blocked IP: 172.18.0.5
+2024-11-03 11:23:59,853 WARNING Attack detected from 172.18.0.3 with probability 1.0. Blocking IP.
+2024-11-03 11:23:59,868 INFO IP 172.18.0.3 is already blocked.
+2024-11-03 11:24:00,655 WARNING Attack detected from 172.18.0.2 with probability 1.0. Blocking IP.
+2024-11-03 11:24:00,664 INFO IP 172.18.0.2 is already blocked.
+2024-11-03 11:24:00,703 WARNING Attack detected from 172.18.0.3 with probability 1.0. Blocking IP.
+2024-11-03 11:24:00,721 INFO IP 172.18.0.3 is already blocked.
+2024-11-03 11:24:04,713 WARNING Attack detected from 172.18.0.4 with probability 1.0. Blocking IP.
+2024-11-03 11:24:04,739 INFO IP 172.18.0.4 is already blocked.
+2024-11-03 11:24:04,839 WARNING Attack detected from 172.18.0.3 with probability 1.0. Blocking IP.
+2024-11-03 11:24:04,863 INFO IP 172.18.0.3 is already blocked.
+2024-11-03 11:47:33,803 INFO Logging initialized and working in real-time.
+2024-11-03 11:50:40,584 INFO Logging initialized and working in real-time.
+2024-11-03 12:17:57,769 INFO Logging initialized and working in real-time.
+2024-11-03 12:18:01,857 INFO Waiting 10 seconds before starting IDS...
+2024-11-03 12:18:11,903 INFO Current network configuration:
+br-7b190fef14c4: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.18.0.1  netmask 255.255.0.0  broadcast 172.18.255.255
+        inet6 fe80::42:cdff:fe90:8fc7  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:cd:90:8f:c7  txqueuelen 0  (Ethernet)
+        RX packets 3  bytes 84 (84.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 7  bytes 746 (746.0 B)
+        TX errors 0  dropped 2 overruns 0  carrier 0  collisions 0
+
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        inet6 fe80::42:b9ff:fed1:e71e  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:b9:d1:e7:1e  txqueuelen 0  (Ethernet)
+        RX packets 141426  bytes 7890151 (7.8 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 367641  bytes 2193939338 (2.1 GB)
+        TX errors 0  dropped 11 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 825  bytes 50995 (50.9 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 825  bytes 50995 (50.9 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth47b7da9: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::a412:37ff:fe6c:3304  prefixlen 64  scopeid 0x20<link>
+        ether a6:12:37:6c:33:04  txqueuelen 0  (Ethernet)
+        RX packets 13  bytes 951 (951.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 20  bytes 1376 (1.3 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth84542f7: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::ccc6:c1ff:fe7d:f64a  prefixlen 64  scopeid 0x20<link>
+        ether ce:c6:c1:7d:f6:4a  txqueuelen 0  (Ethernet)
+        RX packets 10  bytes 827 (827.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 21  bytes 1518 (1.5 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vethd97a403: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::40c2:f9ff:fe6f:bb0f  prefixlen 64  scopeid 0x20<link>
+        ether 42:c2:f9:6f:bb:0f  txqueuelen 0  (Ethernet)
+        RX packets 27  bytes 1686 (1.6 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 40  bytes 3115 (3.1 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vethfd89489: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::84d4:f2ff:fee3:2496  prefixlen 64  scopeid 0x20<link>
+        ether 86:d4:f2:e3:24:96  txqueuelen 0  (Ethernet)
+        RX packets 9  bytes 681 (681.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 20  bytes 1452 (1.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlp0s20f3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.55  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fdec:1838:fb48:0:3075:885c:4953:8ee5  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::ae96:9dcf:de33:f6b0  prefixlen 64  scopeid 0x20<link>
+        ether e0:d0:45:c7:22:20  txqueuelen 1000  (Ethernet)
+        RX packets 2699082  bytes 4040837588 (4.0 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 310455  bytes 34749901 (34.7 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+2024-11-03 12:18:11,903 INFO Detected Docker bridge interface: br-7b190fef14c4
+2024-11-03 12:18:11,903 INFO Starting packet sniffing on br-7b190fef14c4...
+2024-11-03 12:18:16,484 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:16,488 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:16,514 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:16,517 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:17,491 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:17,495 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:21,480 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:21,484 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:24,502 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:24,506 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:26,488 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:26,492 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:26,527 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:26,533 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:31,489 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:31,494 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:31,501 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:31,504 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:36,493 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:36,497 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:36,539 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:36,546 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:38,511 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:38,517 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:41,502 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:41,509 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:45,517 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:45,525 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:46,504 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:46,516 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:46,547 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:46,555 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:51,502 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:51,508 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:52,522 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:18:52,530 ERROR Error in predict_and_act: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- ACK Flag Count
+- Active Max
+- Active Min
+- Active Std
+- Average Packet Size
+- ...
+Feature names seen at fit time, yet now missing:
+-  ACK Flag Count
+-  Active Max
+-  Active Min
+-  Active Std
+-  Average Packet Size
+- ...
+
+2024-11-03 12:43:22,557 INFO Logging initialized and working in real-time.
+2024-11-03 12:43:26,442 INFO Waiting 10 seconds before starting IDS...
+2024-11-03 12:43:36,484 INFO Current network configuration:
+br-e530b5c11659: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.18.0.1  netmask 255.255.0.0  broadcast 172.18.255.255
+        inet6 fe80::42:beff:feba:5b9e  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:be:ba:5b:9e  txqueuelen 0  (Ethernet)
+        RX packets 3  bytes 84 (84.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 10  bytes 1020 (1.0 KB)
+        TX errors 0  dropped 1 overruns 0  carrier 0  collisions 0
+
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        inet6 fe80::42:b9ff:fed1:e71e  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:b9:d1:e7:1e  txqueuelen 0  (Ethernet)
+        RX packets 160415  bytes 8974276 (8.9 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 412639  bytes 2560048260 (2.5 GB)
+        TX errors 0  dropped 17 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 1053  bytes 64067 (64.0 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1053  bytes 64067 (64.0 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth06d2a1c: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::5815:42ff:fe2b:c68d  prefixlen 64  scopeid 0x20<link>
+        ether 5a:15:42:2b:c6:8d  txqueuelen 0  (Ethernet)
+        RX packets 8  bytes 639 (639.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 19  bytes 1410 (1.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth671bf76: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::4026:e0ff:fe03:c0d8  prefixlen 64  scopeid 0x20<link>
+        ether 42:26:e0:03:c0:d8  txqueuelen 0  (Ethernet)
+        RX packets 9  bytes 784 (784.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 19  bytes 1366 (1.3 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth67e0735: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::e8e8:47ff:fe85:c6f7  prefixlen 64  scopeid 0x20<link>
+        ether ea:e8:47:85:c6:f7  txqueuelen 0  (Ethernet)
+        RX packets 24  bytes 1560 (1.5 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 38  bytes 3098 (3.0 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vethc791937: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::84ce:22ff:fedd:d84a  prefixlen 64  scopeid 0x20<link>
+        ether 86:ce:22:dd:d8:4a  txqueuelen 0  (Ethernet)
+        RX packets 12  bytes 909 (909.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 21  bytes 1554 (1.5 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlp0s20f3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.55  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fdec:1838:fb48:0:3075:885c:4953:8ee5  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::ae96:9dcf:de33:f6b0  prefixlen 64  scopeid 0x20<link>
+        ether e0:d0:45:c7:22:20  txqueuelen 1000  (Ethernet)
+        RX packets 3306891  bytes 4948955258 (4.9 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 371258  bytes 41166470 (41.1 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+2024-11-03 12:43:36,485 INFO Detected Docker bridge interface: br-e530b5c11659
+2024-11-03 12:43:36,485 INFO Starting packet sniffing on br-e530b5c11659...
+2024-11-03 12:43:43,718 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:43:47,207 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:43:50,003 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:43:52,305 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:43:54,608 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:43:56,861 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:43:59,334 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:44:01,739 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:44:04,322 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:44:06,876 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:44:09,387 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:44:11,818 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:44:14,330 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:44:16,761 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:44:19,429 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:44:21,938 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:44:24,482 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:44:26,995 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:44:29,535 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:44:31,850 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:44:34,458 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:44:37,009 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:44:39,599 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:44:42,020 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:44:44,688 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:44:47,072 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:44:49,519 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:44:51,936 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:44:54,633 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:44:57,097 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:44:59,600 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:45:02,133 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:45:04,614 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:45:07,099 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:45:09,797 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:45:12,159 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:45:14,592 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:45:17,111 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:45:19,500 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:45:22,086 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:45:24,666 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:45:27,351 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:45:29,942 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:45:32,734 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:45:35,085 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:45:37,449 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:45:40,655 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:45:43,508 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:45:46,163 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:45:48,693 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:45:51,370 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:45:54,253 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:45:57,849 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:46:00,777 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:46:03,427 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:46:06,222 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:46:08,978 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:46:11,707 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:46:14,273 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:46:17,161 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:46:20,486 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:46:23,884 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:46:27,360 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:46:30,745 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:46:34,249 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:46:37,080 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:46:39,926 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:46:42,891 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:46:45,635 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:46:48,153 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:46:50,810 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:46:53,394 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:46:56,048 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:46:58,777 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:47:01,695 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:47:05,226 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:47:08,469 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:47:11,308 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:47:14,286 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:47:17,138 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:47:19,575 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:47:22,358 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:47:25,178 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:47:27,994 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:47:31,102 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:47:33,785 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:47:37,088 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:47:39,908 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:47:42,499 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:47:44,827 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:47:47,290 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:47:49,777 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:47:52,395 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:47:55,267 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:47:57,972 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:48:00,628 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:48:03,170 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:48:05,779 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:48:08,191 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:48:10,766 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:48:14,234 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:48:16,945 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:48:20,308 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:48:22,909 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:48:25,555 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:48:28,390 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:48:31,139 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:48:33,610 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:48:36,138 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:48:38,783 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:48:41,301 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:48:43,909 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:48:46,787 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:48:49,817 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:48:52,804 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:48:55,450 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:48:58,127 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:49:00,597 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:49:03,200 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:49:06,046 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:49:09,346 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:49:12,078 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:49:14,797 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:49:17,408 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:49:19,918 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:49:23,161 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:49:25,898 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:49:28,548 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:49:31,435 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:49:34,277 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:49:37,317 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:49:40,629 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:49:43,688 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:49:46,697 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:49:49,901 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:49:52,785 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:49:55,830 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:49:58,920 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:50:01,998 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:50:05,066 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:50:08,145 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:50:11,333 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:50:13,987 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:50:16,671 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:50:19,239 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:50:21,839 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:50:24,481 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:50:27,058 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:50:29,694 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:50:32,382 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:50:35,460 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:50:38,079 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:50:40,892 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:50:43,668 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:50:46,801 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:50:49,889 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:50:52,992 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:50:56,212 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:50:59,312 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:51:02,992 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:51:07,296 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:51:12,001 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:53:49,603 INFO Logging initialized and working in real-time.
+2024-11-03 12:53:53,475 INFO Waiting 10 seconds before starting IDS...
+2024-11-03 12:54:03,516 INFO Current network configuration:
+br-e530b5c11659: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.18.0.1  netmask 255.255.0.0  broadcast 172.18.255.255
+        inet6 fe80::42:beff:feba:5b9e  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:be:ba:5b:9e  txqueuelen 0  (Ethernet)
+        RX packets 175006  bytes 7709872 (7.7 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 173584  bytes 9374056 (9.3 MB)
+        TX errors 0  dropped 1 overruns 0  carrier 0  collisions 0
+
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        inet6 fe80::42:b9ff:fed1:e71e  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:b9:d1:e7:1e  txqueuelen 0  (Ethernet)
+        RX packets 167997  bytes 9406596 (9.4 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 439367  bytes 2694202273 (2.6 GB)
+        TX errors 0  dropped 17 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 1146  bytes 69399 (69.3 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1146  bytes 69399 (69.3 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth0ef511a: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::d0b5:6ff:fe8a:e36e  prefixlen 64  scopeid 0x20<link>
+        ether d2:b5:06:8a:e3:6e  txqueuelen 0  (Ethernet)
+        RX packets 9  bytes 681 (681.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 19  bytes 1342 (1.3 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vethb377d7b: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::7443:2eff:febd:b806  prefixlen 64  scopeid 0x20<link>
+        ether 76:43:2e:bd:b8:06  txqueuelen 0  (Ethernet)
+        RX packets 9  bytes 748 (748.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 20  bytes 1464 (1.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vethfa8bf2d: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::7446:40ff:fe94:524a  prefixlen 64  scopeid 0x20<link>
+        ether 76:46:40:94:52:4a  txqueuelen 0  (Ethernet)
+        RX packets 26  bytes 1632 (1.6 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 40  bytes 3146 (3.1 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vethfbab739: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::2c6f:49ff:feb6:9807  prefixlen 64  scopeid 0x20<link>
+        ether 2e:6f:49:b6:98:07  txqueuelen 0  (Ethernet)
+        RX packets 13  bytes 951 (951.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 21  bytes 1486 (1.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlp0s20f3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.55  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fdec:1838:fb48:0:3075:885c:4953:8ee5  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::ae96:9dcf:de33:f6b0  prefixlen 64  scopeid 0x20<link>
+        ether e0:d0:45:c7:22:20  txqueuelen 1000  (Ethernet)
+        RX packets 3402849  bytes 5088791080 (5.0 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 382911  bytes 43111616 (43.1 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+2024-11-03 12:54:03,516 INFO Detected Docker bridge interface: br-e530b5c11659
+2024-11-03 12:54:03,516 INFO Starting packet sniffing on br-e530b5c11659...
+2024-11-03 12:54:10,440 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:54:13,037 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:54:15,697 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:54:18,418 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:54:21,187 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:54:23,774 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:54:26,549 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:54:29,172 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:54:31,665 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:54:34,175 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:54:36,868 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:54:39,456 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:54:42,179 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:54:44,768 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:54:47,349 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:54:49,897 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:54:52,393 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:54:54,982 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:54:57,519 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:55:00,035 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:55:02,727 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:55:05,536 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:55:08,018 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:55:10,915 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:55:13,470 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:55:16,345 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:55:19,269 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:55:21,843 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:55:24,918 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:55:27,898 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:55:30,827 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:55:33,419 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:55:36,426 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:55:39,124 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:55:41,555 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:55:44,085 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:55:46,616 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:55:49,123 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:55:51,535 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:55:54,075 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:55:56,550 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:55:59,129 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:56:01,522 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:56:04,470 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:56:06,892 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:56:09,323 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:56:11,680 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:56:14,108 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:56:16,671 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:56:19,114 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:56:21,700 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:56:24,042 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:56:26,465 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:56:29,197 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:56:31,993 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:56:34,998 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:56:38,088 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:56:41,253 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:56:44,345 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:56:47,482 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:56:50,529 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:56:53,668 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:56:56,671 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:56:59,600 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:57:02,786 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:57:05,830 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:57:08,796 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:57:11,812 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:57:14,769 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:57:17,742 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:57:20,752 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:57:23,194 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:57:25,823 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:57:28,533 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:57:30,975 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:57:33,441 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:57:36,292 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:57:38,627 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:57:41,123 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:57:43,737 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:57:46,289 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:57:48,724 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:57:51,236 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:57:53,735 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:57:56,259 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:57:58,798 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:58:01,302 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:58:03,692 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:58:06,300 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:58:08,842 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:58:12,224 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:58:15,295 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:58:18,546 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:58:21,483 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:58:24,289 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:58:26,714 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:58:29,906 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:58:32,641 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:58:35,587 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:58:38,531 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:58:41,519 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:58:44,353 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:58:47,173 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:58:49,733 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:58:52,281 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:58:54,881 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:58:57,317 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:59:00,682 INFO Normal traffic from 0.0.0.0
+2024-11-03 12:59:04,396 INFO Normal traffic from 0.0.0.0
+2024-11-03 13:00:39,109 INFO Logging initialized and working in real-time.
+2024-11-03 13:00:44,743 INFO Waiting 10 seconds before starting IDS...
+2024-11-03 13:00:54,806 INFO Current network configuration:
+br-e530b5c11659: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.18.0.1  netmask 255.255.0.0  broadcast 172.18.255.255
+        inet6 fe80::42:beff:feba:5b9e  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:be:ba:5b:9e  txqueuelen 0  (Ethernet)
+        RX packets 227132  bytes 10010303 (10.0 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 225040  bytes 12152768 (12.1 MB)
+        TX errors 0  dropped 1 overruns 0  carrier 0  collisions 0
+
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        inet6 fe80::42:b9ff:fed1:e71e  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:b9:d1:e7:1e  txqueuelen 0  (Ethernet)
+        RX packets 177565  bytes 9939908 (9.9 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 462895  bytes 2828146023 (2.8 GB)
+        TX errors 0  dropped 17 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 1213  bytes 73251 (73.2 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1213  bytes 73251 (73.2 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth5674296: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::3c2c:13ff:febe:110f  prefixlen 64  scopeid 0x20<link>
+        ether 3e:2c:13:be:11:0f  txqueuelen 0  (Ethernet)
+        RX packets 10  bytes 826 (826.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 20  bytes 1408 (1.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth3eb8409: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::d848:b1ff:fe2c:c651  prefixlen 64  scopeid 0x20<link>
+        ether da:48:b1:2c:c6:51  txqueuelen 0  (Ethernet)
+        RX packets 13  bytes 951 (951.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 21  bytes 1486 (1.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth9c1c683: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::3c2e:47ff:fe08:590a  prefixlen 64  scopeid 0x20<link>
+        ether 3e:2e:47:08:59:0a  txqueuelen 0  (Ethernet)
+        RX packets 8  bytes 613 (613.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 19  bytes 1398 (1.3 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vethe4688ef: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::70dd:94ff:fe83:6b98  prefixlen 64  scopeid 0x20<link>
+        ether 72:dd:94:83:6b:98  txqueuelen 0  (Ethernet)
+        RX packets 26  bytes 1632 (1.6 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 40  bytes 3156 (3.1 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlp0s20f3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.55  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fdec:1838:fb48:0:3075:885c:4953:8ee5  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::ae96:9dcf:de33:f6b0  prefixlen 64  scopeid 0x20<link>
+        ether e0:d0:45:c7:22:20  txqueuelen 1000  (Ethernet)
+        RX packets 3497390  bytes 5228346443 (5.2 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 395098  bytes 44783992 (44.7 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+2024-11-03 13:00:54,806 INFO Detected Docker bridge interface: br-e530b5c11659
+2024-11-03 13:00:54,806 INFO Starting packet sniffing on br-e530b5c11659...
+2024-11-03 13:00:56,172 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:00:56,175 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:00:57,344 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:00:57,346 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:00:57,372 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:00:57,374 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:02,377 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:02,380 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:03,172 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:03,174 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:07,356 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:07,358 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:07,383 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:07,386 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:10,178 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:10,180 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:12,388 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:12,390 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:17,186 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:17,188 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:17,366 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:17,370 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:17,394 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:17,398 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:22,395 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:22,397 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:24,191 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:24,193 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:27,375 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:27,376 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:27,399 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:27,402 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:31,197 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:31,199 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:32,401 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:32,402 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:37,385 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:37,387 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:37,405 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:37,407 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:38,206 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:38,209 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:42,411 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:42,414 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:45,212 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:45,214 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:47,396 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:47,398 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:47,414 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:47,416 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:52,218 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:52,220 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:52,418 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:52,420 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:57,404 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:57,406 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:57,422 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:57,425 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:59,224 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:01:59,226 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:02,425 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:02,426 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:06,233 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:06,235 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:07,416 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:07,418 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:07,428 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:07,431 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:12,432 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:12,433 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:13,239 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:13,241 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:17,425 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:17,428 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:17,435 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:17,437 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:20,245 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:20,246 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:22,444 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:22,447 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:27,252 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:27,253 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:27,435 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:27,438 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:27,445 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:27,446 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:32,449 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:32,452 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:34,257 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:34,258 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:37,444 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:37,446 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:37,452 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:37,454 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:41,263 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:41,265 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:42,456 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:42,460 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:47,457 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:47,460 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:47,462 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:47,464 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:48,270 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:48,273 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:52,464 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:52,467 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:55,279 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:55,280 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:57,467 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:57,469 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:57,471 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:02:57,472 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:03:02,284 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:03:02,287 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:03:02,473 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:03:02,476 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:03:07,474 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:03:07,475 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:03:07,477 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:03:07,478 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:03:09,290 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:03:09,291 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:03:12,480 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:03:12,482 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:03:16,298 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:03:16,299 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:03:17,485 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:03:17,487 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:03:17,489 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:03:17,492 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:04:43,812 INFO Logging initialized and working in real-time.
+2024-11-03 13:04:47,774 INFO Waiting 10 seconds before starting IDS...
+2024-11-03 13:04:57,816 INFO Current network configuration:
+br-e530b5c11659: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.18.0.1  netmask 255.255.0.0  broadcast 172.18.255.255
+        inet6 fe80::42:beff:feba:5b9e  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:be:ba:5b:9e  txqueuelen 0  (Ethernet)
+        RX packets 227286  bytes 10020439 (10.0 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 225042  bytes 12152988 (12.1 MB)
+        TX errors 0  dropped 1 overruns 0  carrier 0  collisions 0
+
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        inet6 fe80::42:b9ff:fed1:e71e  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:b9:d1:e7:1e  txqueuelen 0  (Ethernet)
+        RX packets 185694  bytes 10389203 (10.3 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 485393  bytes 2962018836 (2.9 GB)
+        TX errors 0  dropped 17 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 1249  bytes 75315 (75.3 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1249  bytes 75315 (75.3 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth198262a: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::f8ce:56ff:fef6:225c  prefixlen 64  scopeid 0x20<link>
+        ether fa:ce:56:f6:22:5c  txqueuelen 0  (Ethernet)
+        RX packets 13  bytes 951 (951.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 22  bytes 1596 (1.5 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth2a7c9ab: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::6883:4fff:fe4e:812a  prefixlen 64  scopeid 0x20<link>
+        ether 6a:83:4f:4e:81:2a  txqueuelen 0  (Ethernet)
+        RX packets 27  bytes 1686 (1.6 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 42  bytes 3334 (3.3 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth3e1ff33: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::e09e:1aff:fe5b:87c0  prefixlen 64  scopeid 0x20<link>
+        ether e2:9e:1a:5b:87:c0  txqueuelen 0  (Ethernet)
+        RX packets 10  bytes 826 (826.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 21  bytes 1518 (1.5 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth41ccdb9: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::c870:e5ff:fe18:57de  prefixlen 64  scopeid 0x20<link>
+        ether ca:70:e5:18:57:de  txqueuelen 0  (Ethernet)
+        RX packets 9  bytes 681 (681.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 20  bytes 1452 (1.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlp0s20f3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.55  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fdec:1838:fb48:0:3075:885c:4953:8ee5  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::ae96:9dcf:de33:f6b0  prefixlen 64  scopeid 0x20<link>
+        ether e0:d0:45:c7:22:20  txqueuelen 1000  (Ethernet)
+        RX packets 3590585  bytes 5367246997 (5.3 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 404820  bytes 45961646 (45.9 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+2024-11-03 13:04:57,817 INFO Detected Docker bridge interface: br-e530b5c11659
+2024-11-03 13:04:57,817 INFO Starting packet sniffing on br-e530b5c11659...
+2024-11-03 13:05:02,697 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:05:02,700 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:05:02,702 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:05:02,703 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:05:03,756 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:05:03,758 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:05:07,693 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:05:07,694 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:05:10,763 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:05:10,766 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:05:12,698 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:05:12,700 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:05:12,711 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:05:12,713 ERROR Error in predict_and_act: name 'preprocess_features' is not defined
+2024-11-03 13:07:10,943 INFO Logging initialized and working in real-time.
+2024-11-03 13:07:15,099 INFO Waiting 10 seconds before starting IDS...
+2024-11-03 13:07:25,147 INFO Current network configuration:
+br-e530b5c11659: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.18.0.1  netmask 255.255.0.0  broadcast 172.18.255.255
+        inet6 fe80::42:beff:feba:5b9e  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:be:ba:5b:9e  txqueuelen 0  (Ethernet)
+        RX packets 227310  bytes 10021805 (10.0 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 225044  bytes 12153208 (12.1 MB)
+        TX errors 0  dropped 1 overruns 0  carrier 0  collisions 0
+
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        inet6 fe80::42:b9ff:fed1:e71e  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:b9:d1:e7:1e  txqueuelen 0  (Ethernet)
+        RX packets 193495  bytes 10832228 (10.8 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 505622  bytes 3095741597 (3.0 GB)
+        TX errors 0  dropped 17 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 1273  bytes 76691 (76.6 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1273  bytes 76691 (76.6 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth5ce4e5f: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::3041:74ff:fedc:a7c3  prefixlen 64  scopeid 0x20<link>
+        ether 32:41:74:dc:a7:c3  txqueuelen 0  (Ethernet)
+        RX packets 8  bytes 639 (639.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 18  bytes 1300 (1.3 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth5fb3a2b: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::14c7:8ff:fe83:ee0c  prefixlen 64  scopeid 0x20<link>
+        ether 16:c7:08:83:ee:0c  txqueuelen 0  (Ethernet)
+        RX packets 10  bytes 827 (827.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 21  bytes 1518 (1.5 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth7e40e76: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::c077:6fff:fe16:f560  prefixlen 64  scopeid 0x20<link>
+        ether c2:77:6f:16:f5:60  txqueuelen 0  (Ethernet)
+        RX packets 25  bytes 1602 (1.6 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 39  bytes 3142 (3.1 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vethf88b582: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::82e:b6ff:fe51:1e95  prefixlen 64  scopeid 0x20<link>
+        ether 0a:2e:b6:51:1e:95  txqueuelen 0  (Ethernet)
+        RX packets 12  bytes 910 (910.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 20  bytes 1444 (1.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlp0s20f3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.55  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fdec:1838:fb48:0:3075:885c:4953:8ee5  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::ae96:9dcf:de33:f6b0  prefixlen 64  scopeid 0x20<link>
+        ether e0:d0:45:c7:22:20  txqueuelen 1000  (Ethernet)
+        RX packets 3683044  bytes 5505947215 (5.5 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 413481  bytes 46909784 (46.9 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+2024-11-03 13:07:25,148 INFO Detected Docker bridge interface: br-e530b5c11659
+2024-11-03 13:07:25,148 INFO Starting packet sniffing on br-e530b5c11659...
+2024-11-03 13:07:31,950 INFO Normal traffic from 0.0.0.0
+2024-11-03 13:07:34,676 INFO Normal traffic from 0.0.0.0
+2024-11-03 13:07:37,777 INFO Normal traffic from 0.0.0.0
+2024-11-03 13:07:40,708 INFO Normal traffic from 0.0.0.0
+2024-11-03 13:07:43,395 INFO Normal traffic from 0.0.0.0
+2024-11-03 13:07:46,171 INFO Normal traffic from 0.0.0.0
+2024-11-03 13:07:49,018 INFO Normal traffic from 0.0.0.0
+2024-11-03 13:07:52,000 INFO Normal traffic from 0.0.0.0
+2024-11-03 13:07:54,609 INFO Normal traffic from 0.0.0.0
+2024-11-03 13:07:57,338 INFO Normal traffic from 0.0.0.0
+2024-11-03 13:08:00,337 INFO Normal traffic from 0.0.0.0
+2024-11-03 13:08:03,166 INFO Normal traffic from 0.0.0.0
+2024-11-03 13:08:06,154 INFO Normal traffic from 0.0.0.0
+2024-11-03 13:08:09,291 INFO Normal traffic from 0.0.0.0
+2024-11-03 13:08:12,266 INFO Normal traffic from 0.0.0.0
+2024-11-03 13:08:15,230 INFO Normal traffic from 0.0.0.0
+2024-11-03 13:08:18,270 INFO Normal traffic from 0.0.0.0
+2024-11-03 13:08:22,520 INFO Normal traffic from 0.0.0.0
+2024-11-03 13:08:27,295 INFO Normal traffic from 0.0.0.0
+2024-11-03 13:13:29,158 INFO Logging initialized and working in real-time.
+2024-11-03 13:13:34,070 INFO Waiting 10 seconds before starting IDS...
+2024-11-03 13:13:44,109 INFO Current network configuration:
+br-e530b5c11659: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.18.0.1  netmask 255.255.0.0  broadcast 172.18.255.255
+        inet6 fe80::42:beff:feba:5b9e  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:be:ba:5b:9e  txqueuelen 0  (Ethernet)
+        RX packets 252640  bytes 11137587 (11.1 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 249954  bytes 13498424 (13.4 MB)
+        TX errors 0  dropped 1 overruns 0  carrier 0  collisions 0
+
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        inet6 fe80::42:b9ff:fed1:e71e  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:b9:d1:e7:1e  txqueuelen 0  (Ethernet)
+        RX packets 200804  bytes 11245828 (11.2 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 524813  bytes 3229396001 (3.2 GB)
+        TX errors 0  dropped 17 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 1327  bytes 79787 (79.7 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1327  bytes 79787 (79.7 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth3e5d09c: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::8cd3:92ff:fe52:15fe  prefixlen 64  scopeid 0x20<link>
+        ether 8e:d3:92:52:15:fe  txqueuelen 0  (Ethernet)
+        RX packets 9  bytes 681 (681.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 19  bytes 1342 (1.3 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth4b880be: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::19:3dff:fe39:630  prefixlen 64  scopeid 0x20<link>
+        ether 02:19:3d:39:06:30  txqueuelen 0  (Ethernet)
+        RX packets 10  bytes 827 (827.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 20  bytes 1408 (1.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vetha63d6cd: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::9073:44ff:fefe:18e8  prefixlen 64  scopeid 0x20<link>
+        ether 92:73:44:fe:18:e8  txqueuelen 0  (Ethernet)
+        RX packets 12  bytes 910 (910.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 21  bytes 1554 (1.5 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vethf2e1a13: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::9cd2:47ff:fea2:a7ce  prefixlen 64  scopeid 0x20<link>
+        ether 9e:d2:47:a2:a7:ce  txqueuelen 0  (Ethernet)
+        RX packets 26  bytes 1644 (1.6 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 40  bytes 3184 (3.1 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlp0s20f3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.55  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fdec:1838:fb48:0:3075:885c:4953:8ee5  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::ae96:9dcf:de33:f6b0  prefixlen 64  scopeid 0x20<link>
+        ether e0:d0:45:c7:22:20  txqueuelen 1000  (Ethernet)
+        RX packets 3776884  bytes 5644974859 (5.6 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 422831  bytes 48062263 (48.0 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+2024-11-03 13:13:44,110 INFO Detected Docker bridge interface: br-e530b5c11659
+2024-11-03 13:13:44,110 INFO Starting packet sniffing on br-e530b5c11659...
+2024-11-03 13:13:50,596 INFO Normal traffic from 172.18.0.4
+2024-11-03 13:13:53,422 INFO Normal traffic from 172.18.0.2
+2024-11-03 13:13:56,492 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:13:59,447 INFO Normal traffic from 172.18.0.2
+2024-11-03 13:14:02,352 INFO Normal traffic from 172.18.0.5
+2024-11-03 13:14:05,257 INFO Normal traffic from 172.18.0.2
+2024-11-03 13:14:08,257 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:14:11,455 INFO Normal traffic from 172.18.0.2
+2024-11-03 13:14:15,185 INFO Normal traffic from 172.18.0.5
+2024-11-03 13:14:21,363 INFO Normal traffic from 172.18.0.2
+2024-11-03 13:14:24,667 INFO Normal traffic from 172.18.0.4
+2024-11-03 13:14:27,529 INFO Normal traffic from 172.18.0.2
+2024-11-03 13:14:30,715 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:14:34,432 INFO Normal traffic from 172.18.0.2
+2024-11-03 13:14:37,802 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:14:42,011 INFO Normal traffic from 172.18.0.2
+2024-11-03 13:14:45,689 INFO Normal traffic from 172.18.0.5
+2024-11-03 13:14:49,376 INFO Normal traffic from 172.18.0.2
+2024-11-03 13:14:52,593 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:14:56,393 INFO Normal traffic from 172.18.0.2
+2024-11-03 13:15:00,498 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:15:04,229 INFO Normal traffic from 172.18.0.2
+2024-11-03 13:15:07,269 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:15:10,635 INFO Normal traffic from 172.18.0.2
+2024-11-03 13:15:14,641 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:23:57,458 INFO Logging initialized and working in real-time.
+2024-11-03 13:24:01,552 INFO Waiting 10 seconds before starting IDS...
+2024-11-03 13:24:11,602 INFO Current network configuration:
+br-e32ea2c4ff9c: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.18.0.1  netmask 255.255.0.0  broadcast 172.18.255.255
+        inet6 fe80::42:3ff:feab:4e2c  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:03:ab:4e:2c  txqueuelen 0  (Ethernet)
+        RX packets 3  bytes 84 (84.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 6  bytes 580 (580.0 B)
+        TX errors 0  dropped 1 overruns 0  carrier 0  collisions 0
+
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        inet6 fe80::42:b9ff:fed1:e71e  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:b9:d1:e7:1e  txqueuelen 0  (Ethernet)
+        RX packets 213263  bytes 11953637 (11.9 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 556018  bytes 3398384715 (3.3 GB)
+        TX errors 0  dropped 17 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 1423  bytes 85291 (85.2 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1423  bytes 85291 (85.2 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth7444239: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::e0a0:c9ff:fe9e:7010  prefixlen 64  scopeid 0x20<link>
+        ether e2:a0:c9:9e:70:10  txqueuelen 0  (Ethernet)
+        RX packets 8  bytes 639 (639.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 21  bytes 1606 (1.6 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth77e452d: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::acb9:73ff:feb2:97f9  prefixlen 64  scopeid 0x20<link>
+        ether ae:b9:73:b2:97:f9  txqueuelen 0  (Ethernet)
+        RX packets 26  bytes 1644 (1.6 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 43  bytes 3490 (3.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth8873be0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::835:4ff:fe29:8fe9  prefixlen 64  scopeid 0x20<link>
+        ether 0a:35:04:29:8f:e9  txqueuelen 0  (Ethernet)
+        RX packets 13  bytes 952 (952.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 26  bytes 1956 (1.9 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vethb2736ee: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::ac78:fbff:fed0:8272  prefixlen 64  scopeid 0x20<link>
+        ether ae:78:fb:d0:82:72  txqueuelen 0  (Ethernet)
+        RX packets 10  bytes 827 (827.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 25  bytes 1878 (1.8 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlp0s20f3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.55  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fdec:1838:fb48:0:3075:885c:4953:8ee5  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::ae96:9dcf:de33:f6b0  prefixlen 64  scopeid 0x20<link>
+        ether e0:d0:45:c7:22:20  txqueuelen 1000  (Ethernet)
+        RX packets 4247254  bytes 6347504041 (6.3 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 476433  bytes 54253960 (54.2 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+2024-11-03 13:24:11,603 INFO Detected Docker bridge interface: br-e32ea2c4ff9c
+2024-11-03 13:24:11,603 INFO Starting packet sniffing on br-e32ea2c4ff9c...
+2024-11-03 13:24:16,148 INFO Evaluating packet from IP 172.18.0.4...
+2024-11-03 13:24:19,866 INFO Normal traffic from 172.18.0.4
+2024-11-03 13:24:19,868 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:24:23,049 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:24:23,051 INFO Evaluating packet from IP 172.18.0.2...
+2024-11-03 13:24:26,169 INFO Normal traffic from 172.18.0.2
+2024-11-03 13:24:26,172 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:24:29,046 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:24:29,048 INFO Evaluating packet from IP 172.18.0.5...
+2024-11-03 13:24:31,748 INFO Normal traffic from 172.18.0.5
+2024-11-03 13:24:31,751 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:24:34,484 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:24:34,485 INFO Evaluating packet from IP 172.18.0.4...
+2024-11-03 13:24:37,431 INFO Normal traffic from 172.18.0.4
+2024-11-03 13:24:37,433 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:24:40,483 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:24:40,486 INFO Evaluating packet from IP 172.18.0.5...
+2024-11-03 13:24:43,285 INFO Normal traffic from 172.18.0.5
+2024-11-03 13:24:43,286 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:24:46,529 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:24:46,533 INFO Evaluating packet from IP 172.18.0.4...
+2024-11-03 13:24:49,481 INFO Normal traffic from 172.18.0.4
+2024-11-03 13:24:49,484 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:24:52,322 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:24:52,324 INFO Evaluating packet from IP 172.18.0.2...
+2024-11-03 13:24:55,317 INFO Normal traffic from 172.18.0.2
+2024-11-03 13:24:55,319 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:24:58,370 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:24:58,375 INFO Evaluating packet from IP 172.18.0.5...
+2024-11-03 13:25:01,290 INFO Normal traffic from 172.18.0.5
+2024-11-03 13:25:01,293 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:25:04,249 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:25:04,252 INFO Evaluating packet from IP 172.18.0.4...
+2024-11-03 13:25:07,173 INFO Normal traffic from 172.18.0.4
+2024-11-03 13:25:07,176 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:25:09,981 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:25:09,985 INFO SYN packet count from 172.18.0.1: 1
+2024-11-03 13:25:09,985 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:25:12,819 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:25:12,821 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:25:15,727 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:25:15,728 INFO SYN packet count from 172.18.0.1: 2
+2024-11-03 13:25:15,729 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:25:18,648 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:25:18,650 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:25:21,822 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:25:21,823 INFO SYN packet count from 172.18.0.1: 3
+2024-11-03 13:25:21,824 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:25:25,465 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:25:25,469 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:25:28,696 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:25:28,698 INFO SYN packet count from 172.18.0.1: 4
+2024-11-03 13:25:28,699 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:25:32,134 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:25:32,136 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:25:35,659 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:25:35,661 INFO SYN packet count from 172.18.0.1: 5
+2024-11-03 13:25:35,661 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:25:39,804 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:25:39,806 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:25:43,663 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:25:43,665 INFO SYN packet count from 172.18.0.1: 6
+2024-11-03 13:25:43,666 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:25:47,375 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:25:47,378 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:25:51,080 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:25:51,082 INFO SYN packet count from 172.18.0.1: 7
+2024-11-03 13:25:51,082 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:25:54,166 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:25:54,168 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:25:57,511 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:25:57,512 INFO SYN packet count from 172.18.0.1: 8
+2024-11-03 13:25:57,514 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:26:00,296 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:26:00,298 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:26:03,276 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:26:03,278 INFO SYN packet count from 172.18.0.1: 9
+2024-11-03 13:26:03,280 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:26:06,114 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:26:06,116 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:26:09,070 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:26:09,071 INFO SYN packet count from 172.18.0.1: 10
+2024-11-03 13:26:09,072 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:26:11,917 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:26:11,919 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:26:14,769 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:26:14,770 INFO SYN packet count from 172.18.0.1: 11
+2024-11-03 13:26:14,770 WARNING SYN flood detected from 172.18.0.1. Blocking IP.
+2024-11-03 13:26:14,812 INFO Blocked IP: 172.18.0.1
+2024-11-03 13:26:14,813 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:26:17,636 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:26:17,639 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:26:20,492 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:26:20,494 INFO SYN packet count from 172.18.0.1: 1
+2024-11-03 13:26:20,495 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:26:23,633 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:26:23,637 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:26:26,451 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:26:26,452 INFO SYN packet count from 172.18.0.1: 2
+2024-11-03 13:26:26,453 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:26:29,630 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:26:29,631 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:26:32,442 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:26:32,442 INFO SYN packet count from 172.18.0.1: 3
+2024-11-03 13:26:32,443 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:26:35,091 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:26:35,095 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:26:37,800 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:26:37,802 INFO SYN packet count from 172.18.0.1: 4
+2024-11-03 13:26:37,803 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:26:40,665 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:26:40,667 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:26:43,467 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:26:43,470 INFO SYN packet count from 172.18.0.1: 5
+2024-11-03 13:26:43,471 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:26:46,806 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:26:46,808 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:26:49,782 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:26:49,783 INFO SYN packet count from 172.18.0.1: 6
+2024-11-03 13:26:49,784 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:26:52,892 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:26:52,896 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:26:55,944 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:26:55,945 INFO SYN packet count from 172.18.0.1: 7
+2024-11-03 13:26:55,946 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:26:58,793 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:26:58,794 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:27:01,534 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:27:01,536 INFO SYN packet count from 172.18.0.1: 8
+2024-11-03 13:27:01,537 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:27:04,480 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:27:04,482 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:27:07,713 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:27:07,713 INFO SYN packet count from 172.18.0.1: 9
+2024-11-03 13:27:07,714 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:27:11,108 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:27:11,109 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:27:14,566 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:27:14,566 INFO SYN packet count from 172.18.0.1: 10
+2024-11-03 13:27:14,567 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:27:20,219 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:27:20,223 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:27:26,590 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:27:26,592 INFO SYN packet count from 172.18.0.1: 11
+2024-11-03 13:27:26,592 WARNING SYN flood detected from 172.18.0.1. Blocking IP.
+2024-11-03 13:27:26,616 INFO IP 172.18.0.1 is already blocked.
+2024-11-03 13:27:26,617 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:27:29,875 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:27:29,877 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:27:32,835 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:27:32,836 INFO SYN packet count from 172.18.0.1: 1
+2024-11-03 13:27:32,837 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:27:35,745 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:27:35,746 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:27:39,033 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:27:39,035 INFO SYN packet count from 172.18.0.1: 2
+2024-11-03 13:27:39,036 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:27:42,303 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:27:42,307 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:27:45,277 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:27:45,278 INFO SYN packet count from 172.18.0.1: 3
+2024-11-03 13:27:45,279 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:27:48,162 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:27:48,164 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:27:51,266 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:27:51,268 INFO SYN packet count from 172.18.0.1: 4
+2024-11-03 13:27:51,269 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:27:54,245 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:27:54,246 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:27:57,220 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:27:57,221 INFO SYN packet count from 172.18.0.1: 5
+2024-11-03 13:27:57,221 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:27:59,764 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:27:59,766 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:28:02,555 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:28:02,556 INFO SYN packet count from 172.18.0.1: 6
+2024-11-03 13:28:02,557 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:28:05,593 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:28:05,596 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:28:08,394 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:28:08,395 INFO SYN packet count from 172.18.0.1: 7
+2024-11-03 13:28:08,396 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:28:11,032 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:28:11,033 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:28:13,675 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:28:13,676 INFO SYN packet count from 172.18.0.1: 8
+2024-11-03 13:28:13,677 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:28:16,807 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:28:16,809 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:28:19,891 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:28:19,892 INFO SYN packet count from 172.18.0.1: 9
+2024-11-03 13:28:19,893 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:28:22,891 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:28:22,893 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:28:26,105 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:28:26,107 INFO SYN packet count from 172.18.0.1: 10
+2024-11-03 13:28:26,109 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:28:29,304 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:28:29,307 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:28:32,249 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:28:32,251 INFO SYN packet count from 172.18.0.1: 11
+2024-11-03 13:28:32,251 WARNING SYN flood detected from 172.18.0.1. Blocking IP.
+2024-11-03 13:28:32,268 INFO IP 172.18.0.1 is already blocked.
+2024-11-03 13:28:32,270 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:28:35,737 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:28:35,739 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:28:39,214 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:28:39,215 INFO SYN packet count from 172.18.0.1: 1
+2024-11-03 13:28:39,217 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:28:42,743 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:28:42,746 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:28:46,295 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:28:46,297 INFO SYN packet count from 172.18.0.1: 2
+2024-11-03 13:28:46,299 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:28:49,834 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:28:49,836 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:28:53,330 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:28:53,332 INFO SYN packet count from 172.18.0.1: 3
+2024-11-03 13:28:53,333 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:28:56,855 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:28:56,857 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:28:59,960 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:28:59,961 INFO SYN packet count from 172.18.0.1: 4
+2024-11-03 13:28:59,962 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:29:03,008 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:29:03,009 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:29:05,788 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:29:05,789 INFO SYN packet count from 172.18.0.1: 5
+2024-11-03 13:29:05,790 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:29:08,822 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:29:08,826 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:29:11,510 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:29:11,512 INFO SYN packet count from 172.18.0.1: 6
+2024-11-03 13:29:11,513 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:29:14,511 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:29:14,513 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:29:17,407 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:29:17,408 INFO SYN packet count from 172.18.0.1: 7
+2024-11-03 13:29:17,408 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:29:20,397 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:29:20,399 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:29:23,406 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:29:23,407 INFO SYN packet count from 172.18.0.1: 8
+2024-11-03 13:29:23,408 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:29:26,315 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:29:26,316 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:29:29,314 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:29:29,315 INFO SYN packet count from 172.18.0.1: 9
+2024-11-03 13:29:29,316 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:29:32,301 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:29:32,304 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:29:35,339 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:29:35,341 INFO SYN packet count from 172.18.0.1: 10
+2024-11-03 13:29:35,342 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:29:38,800 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:29:38,803 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:29:42,191 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:29:42,193 INFO SYN packet count from 172.18.0.1: 11
+2024-11-03 13:29:42,194 WARNING SYN flood detected from 172.18.0.1. Blocking IP.
+2024-11-03 13:29:42,225 INFO IP 172.18.0.1 is already blocked.
+2024-11-03 13:29:42,228 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:29:46,639 INFO Normal traffic from 172.18.0.1
+2024-11-03 13:29:46,642 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:29:51,285 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:29:51,287 INFO SYN packet count from 172.18.0.1: 1
+2024-11-03 13:29:51,288 INFO Evaluating packet from IP 172.18.0.1...
+2024-11-03 13:39:18,749 INFO Logging initialized and working in real-time.
+2024-11-03 13:39:23,717 INFO Waiting 10 seconds before starting IDS...
+2024-11-03 13:39:33,752 INFO Current network configuration:
+br-e32ea2c4ff9c: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.18.0.1  netmask 255.255.0.0  broadcast 172.18.255.255
+        inet6 fe80::42:3ff:feab:4e2c  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:03:ab:4e:2c  txqueuelen 0  (Ethernet)
+        RX packets 115744  bytes 5100337 (5.1 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 114518  bytes 6184280 (6.1 MB)
+        TX errors 0  dropped 1 overruns 0  carrier 0  collisions 0
+
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        inet6 fe80::42:b9ff:fed1:e71e  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:b9:d1:e7:1e  txqueuelen 0  (Ethernet)
+        RX packets 222159  bytes 12452760 (12.4 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 580033  bytes 3548215818 (3.5 GB)
+        TX errors 0  dropped 17 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 1563  bytes 93307 (93.3 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1563  bytes 93307 (93.3 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth0b5dd7b: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::c4b3:8eff:fe00:c24f  prefixlen 64  scopeid 0x20<link>
+        ether c6:b3:8e:00:c2:4f  txqueuelen 0  (Ethernet)
+        RX packets 9  bytes 681 (681.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 20  bytes 1452 (1.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth4c54ad4: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::8028:61ff:fe85:4cb3  prefixlen 64  scopeid 0x20<link>
+        ether 82:28:61:85:4c:b3  txqueuelen 0  (Ethernet)
+        RX packets 12  bytes 921 (921.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 21  bytes 1554 (1.5 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vetha0cd24f: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::7814:2aff:fedd:c8a7  prefixlen 64  scopeid 0x20<link>
+        ether 7a:14:2a:dd:c8:a7  txqueuelen 0  (Ethernet)
+        RX packets 10  bytes 826 (826.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 21  bytes 1518 (1.5 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vethf85db0b: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::60e4:cdff:fe94:fa0f  prefixlen 64  scopeid 0x20<link>
+        ether 62:e4:cd:94:fa:0f  txqueuelen 0  (Ethernet)
+        RX packets 26  bytes 1644 (1.6 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 40  bytes 3194 (3.1 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlp0s20f3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.55  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fdec:1838:fb48:0:3075:885c:4953:8ee5  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::ae96:9dcf:de33:f6b0  prefixlen 64  scopeid 0x20<link>
+        ether e0:d0:45:c7:22:20  txqueuelen 1000  (Ethernet)
+        RX packets 4390498  bytes 6556098828 (6.5 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 494394  bytes 57198860 (57.1 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+2024-11-03 13:39:33,752 INFO Detected Docker bridge interface: br-e32ea2c4ff9c
+2024-11-03 13:39:33,752 INFO Starting packet sniffing on br-e32ea2c4ff9c...
+2024-11-03 13:39:37,473 INFO Evaluating packet from IP 172.18.0.5...
+2024-11-03 13:39:39,987 INFO Normal traffic from 172.18.0.5
+2024-11-03 13:39:39,989 INFO Evaluating packet from IP 172.18.0.4...
+2024-11-03 13:39:42,583 INFO Normal traffic from 172.18.0.4
+2024-11-03 13:39:42,587 INFO Evaluating packet from IP 172.18.0.2...
+2024-11-03 13:39:45,595 INFO Normal traffic from 172.18.0.2
+2024-11-03 13:39:45,597 INFO Evaluating packet from IP 172.18.0.4...
+2024-11-03 13:39:48,543 INFO Normal traffic from 172.18.0.4
+2024-11-03 13:39:48,545 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:39:51,331 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:39:51,332 INFO Evaluating packet from IP 172.18.0.4...
+2024-11-03 13:39:54,091 INFO Normal traffic from 172.18.0.4
+2024-11-03 13:39:54,094 INFO Evaluating packet from IP 172.18.0.5...
+2024-11-03 13:39:57,179 INFO Normal traffic from 172.18.0.5
+2024-11-03 13:39:57,183 INFO Evaluating packet from IP 172.18.0.4...
+2024-11-03 13:39:59,776 INFO Normal traffic from 172.18.0.4
+2024-11-03 13:39:59,778 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:40:02,251 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:40:02,254 INFO Evaluating packet from IP 172.18.0.4...
+2024-11-03 13:40:04,948 INFO Normal traffic from 172.18.0.4
+2024-11-03 13:40:04,950 INFO Evaluating packet from IP 172.18.0.5...
+2024-11-03 13:40:07,617 INFO Normal traffic from 172.18.0.5
+2024-11-03 13:40:07,619 INFO Evaluating packet from IP 172.18.0.4...
+2024-11-03 13:40:10,182 INFO Normal traffic from 172.18.0.4
+2024-11-03 13:40:10,184 INFO Evaluating packet from IP 172.18.0.2...
+2024-11-03 13:40:13,070 INFO Normal traffic from 172.18.0.2
+2024-11-03 13:40:13,073 INFO Evaluating packet from IP 172.18.0.4...
+2024-11-03 13:40:15,897 INFO Normal traffic from 172.18.0.4
+2024-11-03 13:40:15,899 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:40:18,616 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:40:18,618 INFO Evaluating packet from IP 172.18.0.4...
+2024-11-03 13:40:21,102 INFO Normal traffic from 172.18.0.4
+2024-11-03 13:40:21,103 INFO Evaluating packet from IP 172.18.0.5...
+2024-11-03 13:40:23,697 INFO Normal traffic from 172.18.0.5
+2024-11-03 13:40:23,700 INFO Evaluating packet from IP 172.18.0.4...
+2024-11-03 13:40:26,468 INFO Normal traffic from 172.18.0.4
+2024-11-03 13:40:26,471 INFO Evaluating packet from IP 172.18.0.5...
+2024-11-03 13:40:29,088 INFO Normal traffic from 172.18.0.5
+2024-11-03 13:40:29,090 INFO Evaluating packet from IP 172.18.0.4...
+2024-11-03 13:40:31,632 INFO Normal traffic from 172.18.0.4
+2024-11-03 13:40:31,636 INFO Evaluating packet from IP 172.18.0.2...
+2024-11-03 13:40:34,209 INFO Normal traffic from 172.18.0.2
+2024-11-03 13:40:34,211 INFO Evaluating packet from IP 172.18.0.4...
+2024-11-03 13:40:37,249 INFO Normal traffic from 172.18.0.4
+2024-11-03 13:40:37,252 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:40:40,658 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:40:40,660 INFO Evaluating packet from IP 172.18.0.4...
+2024-11-03 13:40:44,572 INFO Normal traffic from 172.18.0.4
+2024-11-03 13:40:44,576 INFO Evaluating packet from IP 172.18.0.5...
+2024-11-03 13:40:48,420 INFO Normal traffic from 172.18.0.5
+2024-11-03 13:40:48,429 INFO Evaluating packet from IP 172.18.0.4...
+2024-11-03 13:40:52,142 INFO Normal traffic from 172.18.0.4
+2024-11-03 13:40:52,145 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:40:55,897 INFO Normal traffic from 172.18.0.3
+2024-11-03 13:40:55,901 INFO Evaluating packet from IP 172.18.0.4...
+2024-11-03 13:40:59,688 INFO Normal traffic from 172.18.0.4
+2024-11-03 13:40:59,690 INFO Evaluating packet from IP 172.18.0.5...
+2024-11-03 13:41:03,284 INFO Normal traffic from 172.18.0.5
+2024-11-03 13:41:03,287 INFO Evaluating packet from IP 172.18.0.4...
+2024-11-03 13:41:06,842 INFO Normal traffic from 172.18.0.4
+2024-11-03 13:41:06,846 INFO Evaluating packet from IP 172.18.0.2...
+2024-11-03 13:41:10,166 INFO Normal traffic from 172.18.0.2
+2024-11-03 13:41:10,169 INFO Evaluating packet from IP 172.18.0.4...
+2024-11-03 13:41:13,079 INFO Normal traffic from 172.18.0.4
+2024-11-03 13:41:13,083 INFO Evaluating packet from IP 172.18.0.5...
+2024-11-03 13:41:17,137 INFO Normal traffic from 172.18.0.5
+2024-11-03 13:41:17,141 INFO Evaluating packet from IP 172.18.0.4...
+2024-11-03 13:41:21,700 INFO Normal traffic from 172.18.0.4
+2024-11-03 13:41:21,705 INFO Evaluating packet from IP 172.18.0.3...
+2024-11-03 13:49:10,494 INFO Logging initialized and working in real-time.
+2024-11-03 13:49:19,285 INFO Waiting 10 seconds before starting IDS...
+2024-11-03 13:49:29,349 INFO Current network configuration:
+br-692c37ef419d: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.19.0.1  netmask 255.255.0.0  broadcast 172.19.255.255
+        inet6 fe80::42:b8ff:fe49:7074  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:b8:49:70:74  txqueuelen 0  (Ethernet)
+        RX packets 4  bytes 112 (112.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 6  bytes 580 (580.0 B)
+        TX errors 0  dropped 1 overruns 0  carrier 0  collisions 0
+
+br-e32ea2c4ff9c: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.18.0.1  netmask 255.255.0.0  broadcast 172.18.255.255
+        inet6 fe80::42:3ff:feab:4e2c  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:03:ab:4e:2c  txqueuelen 0  (Ethernet)
+        RX packets 115857  bytes 5107910 (5.1 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 114518  bytes 6184280 (6.1 MB)
+        TX errors 0  dropped 1 overruns 0  carrier 0  collisions 0
+
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        inet6 fe80::42:b9ff:fed1:e71e  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:b9:d1:e7:1e  txqueuelen 0  (Ethernet)
+        RX packets 230452  bytes 12922600 (12.9 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 600768  bytes 3681972914 (3.6 GB)
+        TX errors 0  dropped 17 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 1653  bytes 98467 (98.4 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1653  bytes 98467 (98.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth0e21099: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::44c8:cbff:fe66:f1ae  prefixlen 64  scopeid 0x20<link>
+        ether 46:c8:cb:66:f1:ae  txqueuelen 0  (Ethernet)
+        RX packets 122813  bytes 7123274 (7.1 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 245616  bytes 13264585 (13.2 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth0f7cb20: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::9c08:b1ff:fe33:3be0  prefixlen 64  scopeid 0x20<link>
+        ether 9e:08:b1:33:3b:e0  txqueuelen 0  (Ethernet)
+        RX packets 14  bytes 1071 (1.0 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 28  bytes 2064 (2.0 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth3ab9f3a: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::1c63:97ff:fe11:e730  prefixlen 64  scopeid 0x20<link>
+        ether 1e:63:97:11:e7:30  txqueuelen 0  (Ethernet)
+        RX packets 8  bytes 639 (639.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 24  bytes 1812 (1.8 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth5ff3f4e: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::7c11:baff:fe32:5e42  prefixlen 64  scopeid 0x20<link>
+        ether 7e:11:ba:32:5e:42  txqueuelen 0  (Ethernet)
+        RX packets 11  bytes 937 (937.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 27  bytes 1986 (1.9 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vethacc594b: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::ac97:14ff:fef4:241d  prefixlen 64  scopeid 0x20<link>
+        ether ae:97:14:f4:24:1d  txqueuelen 0  (Ethernet)
+        RX packets 245572  bytes 13260864 (13.2 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 122798  bytes 7122600 (7.1 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlp0s20f3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.55  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fdec:1838:fb48:0:3075:885c:4953:8ee5  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::ae96:9dcf:de33:f6b0  prefixlen 64  scopeid 0x20<link>
+        ether e0:d0:45:c7:22:20  txqueuelen 1000  (Ethernet)
+        RX packets 4486089  bytes 6695619503 (6.6 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 506583  bytes 58883133 (58.8 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+2024-11-03 13:49:29,351 INFO Detected Docker bridge interface: br-692c37ef419d
+2024-11-03 13:49:29,351 INFO Starting packet sniffing on br-692c37ef419d...
+2024-11-03 13:49:29,411 INFO Evaluating packet from IP 172.19.0.3...
+2024-11-03 13:49:34,613 INFO Normal traffic from 172.19.0.3
+2024-11-03 13:49:34,616 INFO Evaluating packet from IP 172.19.0.6...
+2024-11-03 13:49:39,225 INFO Normal traffic from 172.19.0.6
+2024-11-03 13:49:39,227 INFO SYN packet count from 172.19.0.6: 1
+2024-11-03 13:49:39,229 INFO Evaluating packet from IP 172.19.0.6...
+2024-11-03 13:49:43,785 INFO Normal traffic from 172.19.0.6
+2024-11-03 13:49:43,790 INFO Evaluating packet from IP 172.19.0.3...
+2024-11-03 13:49:48,311 INFO Normal traffic from 172.19.0.3
+2024-11-03 13:49:48,313 INFO Evaluating packet from IP 172.19.0.6...
+2024-11-03 13:49:52,724 INFO Normal traffic from 172.19.0.6
+2024-11-03 13:49:52,727 INFO SYN packet count from 172.19.0.6: 2
+2024-11-03 13:49:52,728 INFO Evaluating packet from IP 172.19.0.6...
+2024-11-03 13:49:57,174 INFO Normal traffic from 172.19.0.6
+2024-11-03 13:49:57,177 INFO Evaluating packet from IP 172.19.0.3...
+2024-11-03 13:50:01,835 INFO Normal traffic from 172.19.0.3
+2024-11-03 13:50:01,839 INFO Evaluating packet from IP 172.19.0.6...
+2024-11-03 13:50:06,670 INFO Normal traffic from 172.19.0.6
+2024-11-03 13:50:06,672 INFO SYN packet count from 172.19.0.6: 3
+2024-11-03 13:50:06,674 INFO Evaluating packet from IP 172.19.0.6...
+2024-11-03 13:50:11,459 INFO Normal traffic from 172.19.0.6
+2024-11-03 13:50:11,462 INFO Evaluating packet from IP 172.19.0.3...
+2024-11-03 13:50:16,289 INFO Normal traffic from 172.19.0.3
+2024-11-03 13:50:16,294 INFO Evaluating packet from IP 172.19.0.6...
+2024-11-03 13:50:21,501 INFO Normal traffic from 172.19.0.6
+2024-11-03 13:50:21,504 INFO SYN packet count from 172.19.0.6: 4
+2024-11-03 13:50:21,506 INFO Evaluating packet from IP 172.19.0.6...
+2024-11-03 13:50:26,716 INFO Normal traffic from 172.19.0.6
+2024-11-03 13:50:26,720 INFO Evaluating packet from IP 172.19.0.3...
+2024-11-03 13:50:32,130 INFO Normal traffic from 172.19.0.3
+2024-11-03 13:50:32,135 INFO Evaluating packet from IP 172.19.0.6...
+2024-11-03 13:50:37,479 INFO Normal traffic from 172.19.0.6
+2024-11-03 13:50:37,482 INFO SYN packet count from 172.19.0.6: 5
+2024-11-03 13:50:37,484 INFO Evaluating packet from IP 172.19.0.6...
+2024-11-03 13:50:42,615 INFO Normal traffic from 172.19.0.6
+2024-11-03 13:50:42,620 INFO Evaluating packet from IP 172.19.0.3...
+2024-11-03 13:50:47,833 INFO Normal traffic from 172.19.0.3
+2024-11-03 13:50:47,837 INFO Evaluating packet from IP 172.19.0.6...
+2024-11-03 13:50:52,561 INFO Normal traffic from 172.19.0.6
+2024-11-03 13:50:52,564 INFO SYN packet count from 172.19.0.6: 6
+2024-11-03 13:50:52,565 INFO Evaluating packet from IP 172.19.0.6...
+2024-11-03 13:50:57,301 INFO Normal traffic from 172.19.0.6
+2024-11-03 13:50:57,305 INFO Evaluating packet from IP 172.19.0.3...
+2024-11-03 13:51:02,620 INFO Normal traffic from 172.19.0.3
+2024-11-03 13:51:02,623 INFO Evaluating packet from IP 172.19.0.6...
+2024-11-03 13:51:08,097 INFO Normal traffic from 172.19.0.6
+2024-11-03 13:51:08,099 INFO SYN packet count from 172.19.0.6: 7
+2024-11-03 13:51:08,101 INFO Evaluating packet from IP 172.19.0.6...
+2024-11-03 13:51:13,578 INFO Normal traffic from 172.19.0.6
+2024-11-03 13:51:13,584 INFO Evaluating packet from IP 172.19.0.3...
+2024-11-03 13:51:19,073 INFO Normal traffic from 172.19.0.3
+2024-11-03 13:51:19,078 INFO Evaluating packet from IP 172.19.0.6...
+2024-11-03 13:51:24,790 INFO Normal traffic from 172.19.0.6
+2024-11-03 13:51:24,792 INFO SYN packet count from 172.19.0.6: 8
+2024-11-03 13:51:24,793 INFO Evaluating packet from IP 172.19.0.6...
+2024-11-03 13:51:30,453 INFO Normal traffic from 172.19.0.6
+2024-11-03 13:51:30,457 INFO Evaluating packet from IP 172.19.0.3...
+2024-11-03 13:51:35,975 INFO Normal traffic from 172.19.0.3
+2024-11-03 13:51:35,981 INFO Evaluating packet from IP 172.19.0.6...
+2024-11-03 13:51:41,537 INFO Normal traffic from 172.19.0.6
+2024-11-03 13:51:41,540 INFO SYN packet count from 172.19.0.6: 9
+2024-11-03 13:51:41,542 INFO Evaluating packet from IP 172.19.0.6...
+2024-11-03 13:51:47,192 INFO Normal traffic from 172.19.0.6
+2024-11-03 13:51:47,197 INFO Evaluating packet from IP 172.19.0.3...
+2024-11-03 13:51:52,102 INFO Normal traffic from 172.19.0.3
+2024-11-03 13:51:52,106 INFO Evaluating packet from IP 172.19.0.6...
+2024-11-03 13:51:56,623 INFO Normal traffic from 172.19.0.6
+2024-11-03 13:51:56,626 INFO SYN packet count from 172.19.0.6: 10
+2024-11-03 13:51:56,628 INFO Evaluating packet from IP 172.19.0.6...
+2024-11-03 13:52:01,160 INFO Normal traffic from 172.19.0.6
+2024-11-03 13:52:01,163 INFO Evaluating packet from IP 172.19.0.3...
+2024-11-03 13:52:05,791 INFO Normal traffic from 172.19.0.3
+2024-11-03 13:52:05,794 INFO Evaluating packet from IP 172.19.0.6...
+2024-11-03 13:52:10,224 INFO Normal traffic from 172.19.0.6
+2024-11-03 13:52:10,227 INFO SYN packet count from 172.19.0.6: 11
+2024-11-03 13:52:10,228 WARNING SYN flood detected from 172.19.0.6. Blocking IP.
+2024-11-03 13:52:10,291 INFO Blocked IP: 172.19.0.6
+2024-11-03 13:52:10,295 INFO Evaluating packet from IP 172.19.0.6...
+2024-11-03 13:52:14,636 INFO Normal traffic from 172.19.0.6
+2024-11-03 13:52:14,639 INFO Evaluating packet from IP 172.19.0.3...
+2024-11-03 13:52:18,668 INFO Normal traffic from 172.19.0.3
+2024-11-03 13:52:18,671 INFO Evaluating packet from IP 172.19.0.6...
+2024-11-03 13:52:22,673 INFO Normal traffic from 172.19.0.6
+2024-11-03 13:52:22,676 INFO SYN packet count from 172.19.0.6: 1
+2024-11-03 13:52:22,677 INFO Evaluating packet from IP 172.19.0.6...
+2024-11-03 13:52:26,621 INFO Normal traffic from 172.19.0.6
+2024-11-03 13:52:26,624 INFO Evaluating packet from IP 172.19.0.3...
+2024-11-03 13:54:30,908 INFO Logging initialized and working in real-time.
+2024-11-03 13:54:39,394 INFO Waiting 10 seconds before starting IDS...
+2024-11-03 13:54:39,401 ERROR Error: name 'time' is not defined
+2024-11-03 13:56:53,999 INFO Logging initialized and working in real-time.
+2024-11-03 13:57:03,761 INFO Waiting 10 seconds before starting IDS...
+2024-11-03 14:01:32,551 INFO Logging initialized and working in real-time.
+2024-11-03 14:01:41,470 INFO Waiting 5 seconds before starting IDS...
+2024-11-03 14:01:46,516 INFO Current network configuration:
+br-692c37ef419d: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.19.0.1  netmask 255.255.0.0  broadcast 172.19.255.255
+        inet6 fe80::42:b8ff:fe49:7074  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:b8:49:70:74  txqueuelen 0  (Ethernet)
+        RX packets 3033114  bytes 125372725 (125.3 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 12  bytes 1240 (1.2 KB)
+        TX errors 0  dropped 1 overruns 0  carrier 0  collisions 0
+
+br-e32ea2c4ff9c: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.18.0.1  netmask 255.255.0.0  broadcast 172.18.255.255
+        inet6 fe80::42:3ff:feab:4e2c  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:03:ab:4e:2c  txqueuelen 0  (Ethernet)
+        RX packets 115857  bytes 5107910 (5.1 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 114518  bytes 6184280 (6.1 MB)
+        TX errors 0  dropped 1 overruns 0  carrier 0  collisions 0
+
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        inet6 fe80::42:b9ff:fed1:e71e  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:b9:d1:e7:1e  txqueuelen 0  (Ethernet)
+        RX packets 255817  bytes 14351992 (14.3 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 670683  bytes 4095493892 (4.0 GB)
+        TX errors 0  dropped 20 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 1765  bytes 104899 (104.8 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1765  bytes 104899 (104.8 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth755a700: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::f442:94ff:fef1:8810  prefixlen 64  scopeid 0x20<link>
+        ether f6:42:94:f1:88:10  txqueuelen 0  (Ethernet)
+        RX packets 8  bytes 613 (613.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 20  bytes 1440 (1.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth797f71a: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::4ac:3bff:fe94:f251  prefixlen 64  scopeid 0x20<link>
+        ether 06:ac:3b:94:f2:51  txqueuelen 0  (Ethernet)
+        RX packets 13  bytes 963 (963.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 22  bytes 1552 (1.5 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth9d4fe88: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::9844:5aff:fe92:b419  prefixlen 64  scopeid 0x20<link>
+        ether 9a:44:5a:92:b4:19  txqueuelen 0  (Ethernet)
+        RX packets 96011  bytes 5568754 (5.5 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 192008  bytes 10369417 (10.3 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vethcc52004: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::1404:5aff:fe66:b454  prefixlen 64  scopeid 0x20<link>
+        ether 16:04:5a:66:b4:54  txqueuelen 0  (Ethernet)
+        RX packets 191968  bytes 10366248 (10.3 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 95994  bytes 5567864 (5.5 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vethd40b746: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::28eb:5fff:fe47:33ef  prefixlen 64  scopeid 0x20<link>
+        ether 2a:eb:5f:47:33:ef  txqueuelen 0  (Ethernet)
+        RX packets 10  bytes 827 (827.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 21  bytes 1450 (1.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlp0s20f3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.55  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fdec:1838:fb48:0:3075:885c:4953:8ee5  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::ae96:9dcf:de33:f6b0  prefixlen 64  scopeid 0x20<link>
+        ether e0:d0:45:c7:22:20  txqueuelen 1000  (Ethernet)
+        RX packets 4775523  bytes 7125817195 (7.1 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 537822  bytes 62950141 (62.9 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+2024-11-03 14:01:46,518 INFO Detected Docker bridge interface: br-692c37ef419d
+2024-11-03 14:01:46,518 INFO Starting packet sniffing on br-692c37ef419d...
+2024-11-03 14:01:51,633 INFO Normal traffic from 0.0.0.0
+2024-11-03 14:01:56,407 INFO Normal traffic from 0.0.0.0
+2024-11-03 14:02:01,195 INFO Normal traffic from 0.0.0.0
+2024-11-03 14:02:05,630 INFO Normal traffic from 0.0.0.0
+2024-11-03 14:02:10,100 INFO Normal traffic from 0.0.0.0
+2024-11-03 14:02:14,095 INFO Normal traffic from 0.0.0.0
+2024-11-03 14:02:17,958 INFO Normal traffic from 0.0.0.0
+2024-11-03 14:08:00,549 INFO Logging initialized and working in real-time.
+2024-11-03 14:08:09,992 INFO Waiting 5 seconds before starting IDS...
+2024-11-03 14:08:15,064 INFO Current network configuration:
+br-6e817af0bcbe: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.18.0.1  netmask 255.255.0.0  broadcast 172.18.255.255
+        inet6 fe80::42:c5ff:fec2:df82  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:c5:c2:df:82  txqueuelen 0  (Ethernet)
+        RX packets 4  bytes 112 (112.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 6  bytes 580 (580.0 B)
+        TX errors 0  dropped 1 overruns 0  carrier 0  collisions 0
+
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        inet6 fe80::42:b9ff:fed1:e71e  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:b9:d1:e7:1e  txqueuelen 0  (Ethernet)
+        RX packets 268220  bytes 15055123 (15.0 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 701264  bytes 4280680097 (4.2 GB)
+        TX errors 0  dropped 20 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 1825  bytes 108339 (108.3 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1825  bytes 108339 (108.3 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth7380537: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::8478:58ff:fe3b:4046  prefixlen 64  scopeid 0x20<link>
+        ether 86:78:58:3b:40:46  txqueuelen 0  (Ethernet)
+        RX packets 98009  bytes 5684642 (5.6 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 196009  bytes 10585640 (10.5 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth90792e7: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::78e7:6cff:feb8:3b16  prefixlen 64  scopeid 0x20<link>
+        ether 7a:e7:6c:b8:3b:16  txqueuelen 0  (Ethernet)
+        RX packets 195966  bytes 10582140 (10.5 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 97994  bytes 5683916 (5.6 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth9e55c61: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::dc26:caff:fe40:f795  prefixlen 64  scopeid 0x20<link>
+        ether de:26:ca:40:f7:95  txqueuelen 0  (Ethernet)
+        RX packets 8  bytes 639 (639.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 23  bytes 1702 (1.7 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vetha3325be: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::ec0a:a1ff:fe13:a594  prefixlen 64  scopeid 0x20<link>
+        ether ee:0a:a1:13:a5:94  txqueuelen 0  (Ethernet)
+        RX packets 10  bytes 827 (827.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 26  bytes 1920 (1.9 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vethaf452fb: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::a45b:71ff:fe70:e83  prefixlen 64  scopeid 0x20<link>
+        ether a6:5b:71:70:0e:83  txqueuelen 0  (Ethernet)
+        RX packets 12  bytes 908 (908.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 25  bytes 1846 (1.8 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlp0s20f3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.55  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fdec:1838:fb48:0:3075:885c:4953:8ee5  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::ae96:9dcf:de33:f6b0  prefixlen 64  scopeid 0x20<link>
+        ether e0:d0:45:c7:22:20  txqueuelen 1000  (Ethernet)
+        RX packets 5284822  bytes 7892451280 (7.8 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 598719  bytes 68691427 (68.6 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+2024-11-03 14:08:15,065 INFO Detected Docker bridge interface: br-6e817af0bcbe
+2024-11-03 14:08:15,065 INFO Starting packet sniffing on br-6e817af0bcbe...
+2024-11-03 14:08:20,107 INFO Normal traffic from 172.18.0.6
+2024-11-03 14:08:25,082 INFO Normal traffic from 172.18.0.2
+2024-11-03 14:08:30,128 INFO Normal traffic from 172.18.0.6
+2024-11-03 14:08:35,312 INFO Normal traffic from 172.18.0.6
+2024-11-03 14:08:39,869 INFO Normal traffic from 172.18.0.2
+2024-11-03 14:08:44,406 INFO Normal traffic from 172.18.0.6
+2024-11-03 14:08:48,594 INFO Normal traffic from 172.18.0.6
