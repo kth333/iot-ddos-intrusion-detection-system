@@ -1,0 +1,22 @@
+FROM python:3.9-slim
+
+WORKDIR /app
+
+# Install necessary system packages
+RUN apt-get update && apt-get install -y \
+    libpcap-dev \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy device scripts
+COPY device_camera.py /app/
+COPY device_light.py /app/
+COPY device_temperature.py /app/
+
+# Install Python dependencies for MQTT and scapy
+RUN pip install --no-cache-dir \
+    paho-mqtt==1.5.1 \
+    scapy
+
+# Default command
+CMD ["python", "device_camera.py"]

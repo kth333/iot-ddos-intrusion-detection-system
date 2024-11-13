@@ -1,0 +1,85 @@
+networks:
+  iot_network:
+    driver: bridge
+
+services:
+  mqtt-broker:
+    image: eclipse-mosquitto
+    container_name: mqtt-broker
+    networks:
+      - iot_network
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - ./mosquitto/config:/mosquitto/config
+      - ./mosquitto/data:/mosquitto/data
+      - ./mosquitto/log:/mosquitto/log
+
+  device_camera:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile.devices
+    container_name: device_camera
+    command: python device_camera.py
+    networks:
+      - iot_network
+
+  device_light:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile.devices
+    container_name: device_light
+    command: python device_light.py
+    networks:
+      - iot_network
+
+  device_temperature:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile.devices
+    container_name: device_temperature
+    command: python device_temperature.py
+    networks:
+      - iot_network
+
+  ids:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ids
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    privileged: true
+    network_mode: host
+    volumes:
+      - ./models:/app/models
+      - ./data:/app/data
+      - ./ids:/app/ids
+      - ./logs:/logs
+    depends_on:
+      - mqtt-broker
+    command: python ids/ids.py
+
+  ddos_simulator:
+    build:
+      context: .
+      dockerfile: Dockerfile.ddos
+    container_name: ddos_simulator
+    networks:
+      - iot_network
+    depends_on:
+      - mqtt-broker
+    command: "-S -p 1883 --faster --flood mqtt-broker"
+
+  # train:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile.train
+  #   container_name: train
+  #   volumes:
+  #     - ./models:/app/models
+  #     - ./data:/app/data
+  #     - ./scripts:/app/scripts
+  #   command: python /app/scripts/ddos_detector_randomforest.py
