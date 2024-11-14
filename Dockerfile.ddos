@@ -1,8 +1,16 @@
-# Use a lightweight base image with networking tools
-FROM debian:latest
+# Dockerfile.ddos
 
-# Install hping3 and other dependencies
-RUN apt-get update && apt-get install -y hping3 iproute2 && apt-get clean
+# Specify a base image with Python
+FROM python:3.9-slim
 
-# Set an entrypoint to make running commands easier
-ENTRYPOINT ["hping3"]
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the simulator script and other necessary files into the container
+COPY ddos/test_traffic.py /app/ddos/
+
+# Install required Python packages if any
+RUN pip install scapy
+
+# Set the command to run the script
+CMD ["python", "ddos/test_traffic.py"]

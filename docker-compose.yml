@@ -1,13 +1,17 @@
 networks:
   iot_network:
     driver: bridge
+    ipam:
+      config:
+        - subnet: 172.18.0.0/16
 
 services:
   mqtt-broker:
     image: eclipse-mosquitto
     container_name: mqtt-broker
     networks:
-      - iot_network
+      iot_network:
+        ipv4_address: 172.18.0.2
     ports:
       - "1883:1883"
       - "9001:9001"
@@ -23,7 +27,8 @@ services:
     container_name: device_camera
     command: python device_camera.py
     networks:
-      - iot_network
+      iot_network:
+        ipv4_address: 172.18.0.3
 
   device_light:
     build:
@@ -32,7 +37,8 @@ services:
     container_name: device_light
     command: python device_light.py
     networks:
-      - iot_network
+      iot_network:
+        ipv4_address: 172.18.0.4
 
   device_temperature:
     build:
@@ -41,7 +47,8 @@ services:
     container_name: device_temperature
     command: python device_temperature.py
     networks:
-      - iot_network
+      iot_network:
+        ipv4_address: 172.18.0.5
 
   ids:
     build:
@@ -65,10 +72,11 @@ services:
       dockerfile: Dockerfile.ddos
     container_name: ddos_simulator
     networks:
-      - iot_network
+      iot_network:
+        ipv4_address: 172.18.0.6
     depends_on:
       - mqtt-broker
-    command: "-S -p 1883 -i u100 mqtt-broker"
+    command: python ddos/test_traffic.py
 
   # train:
   #   build:
